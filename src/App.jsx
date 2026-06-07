@@ -4,6 +4,9 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Dine from "./pages/Dine";
 import Events from "./pages/Events";
+import Accommodation from "./pages/Accommodation";
+import AccommodationList from "./pages/AccommodationList";
+import AccommodationDetail from "./pages/AccommodationDetail";
 import RestaurantDetail from "./pages/RestaurantDetail";
 import EventDetail from "./pages/EventDetail";
 import Placeholder from "./pages/Placeholder";
@@ -61,6 +64,26 @@ function App() {
             </div>
           }
         />
+        <Route
+          path="/accommodation/:typeId"
+          element={
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <AccommodationList />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/accommodation/:typeId/:unitId"
+          element={
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <AccommodationDetail />
+              </div>
+            </div>
+          }
+        />
 
         {/* Pages — each has exactly one Layout */}
         <Route
@@ -98,8 +121,8 @@ function App() {
         <Route
           path="/accommodation"
           element={
-            <Layout pageTitle="Accommodation">
-              <Placeholder title="Accommodation" />
+            <Layout pageTitle="Accommodation" headerRight={searchBtn}>
+              <Accommodation />
             </Layout>
           }
         />

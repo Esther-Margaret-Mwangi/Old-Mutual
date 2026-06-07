@@ -1,0 +1,122 @@
+.acl-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 12px 24px;
+}
+
+.acl-header {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.acl-header h1 {
+  text-align: center;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--fm-black);
+}
+
+.acl-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--fm-gray-100);
+  background: var(--fm-white);
+  color: var(--fm-black);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(17, 17, 17, 0.1);
+}
+
+.acl-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.acl-card {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 16px;
+  padding: 9px;
+  box-shadow: 0 2px 8px rgba(17, 17, 17, 0.1);
+}
+
+.acl-card-image {
+  width: 100%;
+  height: 136px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.acl-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.acl-card-body h3 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 7px;
+  color: var(--fm-black);
+}
+
+.acl-card-body p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.83rem;
+  color: var(--fm-gray-500);
+  margin-bottom: 5px;
+}
+
+.acl-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.acl-detail-btn {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  min-height: 30px;
+  align-self: center;
+  border-radius: 999px;
+  background: var(--fm-black);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.acl-not-found {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--fm-gray-500);
+}
+
+.acl-not-found button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--fm-black);
+  color: var(--fm-white);
+  padding: 10px 20px;
+  cursor: pointer;
+}

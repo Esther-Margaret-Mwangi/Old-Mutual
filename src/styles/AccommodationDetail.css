@@ -1,0 +1,141 @@
+.acd-shell {
+  min-height: 100%;
+  background: var(--fm-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.acd-hero {
+  position: relative;
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.acd-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.acd-back-btn {
+  position: absolute;
+  top: 44px;
+  left: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--fm-black);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.acd-hero-pill {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.45);
+  backdrop-filter: blur(2px);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--fm-white);
+  text-shadow: 0 1px 6px rgba(17, 17, 17, 0.5);
+  z-index: 2;
+}
+
+.acd-content {
+  padding: 22px 16px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.acd-content h1 {
+  font-size: 1.22rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.acd-desc {
+  color: var(--fm-gray-700);
+  font-size: 0.92rem;
+  line-height: 1.52;
+}
+
+.acd-facts {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.acd-facts li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fm-black);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.acd-chip-panel {
+  border: 1px solid var(--fm-gray-300);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.acd-chip {
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  text-align: center;
+  padding: 6px;
+  border-right: 1px solid var(--fm-gray-300);
+  border-bottom: 1px solid var(--fm-gray-300);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--fm-black);
+}
+
+.acd-chip:nth-child(2n) {
+  border-right: 0;
+}
+
+.acd-chip-panel .acd-chip:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.acd-not-found {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--fm-gray-500);
+}
+
+.acd-not-found button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--fm-black);
+  color: var(--fm-white);
+  padding: 10px 20px;
+  cursor: pointer;
+}
