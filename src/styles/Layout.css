@@ -1,21 +1,22 @@
 .layout {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 14px;
+  height: 100vh;
+  display: block;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
 }
 
 .app-shell {
-  width: min(100%, 440px);
-  min-height: calc(100vh - 28px);
+  width: 100%;
+  height: 100vh;
   background: #ffffff;
-  border: 1px solid var(--fm-gray-100);
-  border-radius: 30px;
+  border: 0;
+  border-radius: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-shadow:
-    0 14px 28px rgba(17, 17, 17, 0.15),
-    0 4px 12px rgba(17, 17, 17, 0.08);
+  box-shadow: none;
 }
 
 .topbar {
@@ -24,6 +25,14 @@
   align-items: center;
   padding: 16px 16px 12px;
   min-height: 76px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: #fff;
 }
 
 .topbar-menu-btn {
@@ -69,12 +78,18 @@
 }
 
 .layout-main {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 8px 14px 24px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .app-shell {
-    width: min(100%, 480px);
+  .layout-main {
+    padding: 10px 20px 28px;
   }
 }
 
