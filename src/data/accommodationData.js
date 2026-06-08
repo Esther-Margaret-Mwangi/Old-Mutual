@@ -233,8 +233,7 @@ const accommodationUnits = {
       size: "73 m2/785sqft",
       persons: "3 persons",
       extra: "Mountain View",
-      image:
-        "https://images.unsplash.com/photo-1616594039964-3f7f5f2f9d7b?w=900&q=80",
+      image: accessibleImage,
       description:
       "Located walking distance from the main building, the suite provides a living room area with sofa bed and a stone fire.",
       chips: ["ACCESSIBLE", "KING BED", "MOUNTAIN VIEW"],
