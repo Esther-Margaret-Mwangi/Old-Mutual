@@ -3,7 +3,9 @@ import room2Image from "../assets/images/room2.jpg";
 import room3Image from "../assets/images/room3.jpg";
 import suitesImage from "../assets/images/suite1.jpg";
 import villasImage from "../assets/images/villa1.jpg";
+import villas2Image from "../assets/images/villa2.jpg";
 import bungalowsImage from "../assets/images/bungallow1.jpg";
+import bungalow2Image from "../assets/images/bungallow2.jpg";
 import accessibleImage from "../assets/images/acessible1.jpg";
 import suite2Image from "../assets/images/suite2.jpg";
 import suite3Image from "../assets/images/suite3.jpg";
@@ -161,31 +163,60 @@ const accommodationUnits = {
   ],
   villas: [
     {
-      id: "garden-villa",
-      name: "Garden Villa",
-      bed: "King size bed x 1",
-      size: "70 m2/753sqft",
-      persons: "4 persons",
-      extra: "Private patio",
+      id: "batian-villa",
+      name: "Batian Villa",
+      bed: "Single bed x 2 & King size bed x 1",
+      size: "138 m2/1485sqft",
+      persons: "5 persons",
+      extra: "Mountain view",
       image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=80",
+        villasImage,
       description:
-        "A private villa retreat with expansive indoor-outdoor living, dedicated lounge space, and direct access to lush lawns.",
-      chips: ["UP TO 4 GUESTS", "KING BED", "PRIVATE PATIO", "VILLA PRIVACY"],
+       "Discover the perfect blend of warmth and comfort in the exquisite Batian Villa. The expansive living room, graced with a charming fireplace, offers a serene retreat for relaxation and conversation. An elegant dining room seamlessly integrates with a modern open kitchen, creating an inviting space for culinary delights and memorable gatherings. Ideal for families and friends, this villa promises a harmonious living experience",
+      chips: ["UP TO 4 GUESTS", "IDYLLIC VIEWS", "SPACIOUS COMFORT", "SMART TV", "IMMERSED IN NATURE"],
+    },
+    {
+      id: "sendeo-villa",
+      name: "Sendeo Villa",
+      bed: "Twin bed x 2 & King size bed x 1",
+      size: "148 m2/1593sqft",
+      persons: "6 persons",
+      extra: "Forest view",
+      image:
+        villas2Image,
+      description:
+       "Discover the perfect blend of warmth and comfort in the exquisite Sendeo Villa. The expansive living room, graced with a charming fireplace, offers a serene retreat for relaxation and conversation. An elegant dining room seamlessly integrates with a modern open kitchen, creating an inviting space for culinary delights and memorable gatherings. Ideal for families and friends, this villa promises a harmonious living experience.",
+      chips: ["UP TO 6 GUESTS", "IDYLLIC VIEWS", "SPACIOUS COMFORT", "SMART TV", "IMMERSED IN NATURE"],
     },
   ],
   bungalows: [
     {
-      id: "heritage-bungalow",
-      name: "Heritage Bungalow",
-      bed: "Queen size bed x 1",
-      size: "58 m2/624sqft",
-      persons: "3 persons",
-      extra: "Fireplace",
-      image:
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=900&q=80",
+      id: "william-holden-two-bedroom-suite",
+      name: "William Holden Two-Bedroom Suites- 2 king beds",
+      bed: "King size bed x 2",
+      size: "96 m2/1033sqft",
+      persons: "5 persons",
+      extra: "Mountain view",
+      image: bungalowsImage,
       description:
-        "Experience timeless charm in a standalone bungalow featuring warm wooden accents, a cozy fireplace, and generous living space.",
+      "Elegant and classic two bedrooms cottage featuring a spacious lounge with sofas and a beautiful stone fire place.",
+      chips: [
+        "UP TO 3 GUESTS",
+        "FIREPLACE",
+        "STANDALONE UNIT",
+        "CLASSIC STYLE",
+      ],
+    },
+    {
+      id: "william-holden-one-bedroom-suite",
+      name: "William Holden Two-Bedroom Suites- 1 king bed",
+      bed: "Twin bed x 1 & King size bed x 1",
+      size: "96 m2/1033sqft",
+      persons: "5 persons",
+      extra: "Mountain view",
+      image: bungalow2Image,
+      description:
+      "An elegant and classic two bedrooms cottage featuring a spacious lounge with sofas and a beautiful stone fire place.",
       chips: [
         "UP TO 3 GUESTS",
         "FIREPLACE",
@@ -197,16 +228,16 @@ const accommodationUnits = {
   accessible: [
     {
       id: "accessible-room",
-      name: "Accessible Room",
-      bed: "Queen size bed x 1",
-      size: "36 m2/388sqft",
-      persons: "2 persons",
-      extra: "Accessible design",
+      name: "Garden Suite with King Bed",
+      bed: "King size bed x 1",
+      size: "73 m2/785sqft",
+      persons: "3 persons",
+      extra: "Mountain View",
       image:
         "https://images.unsplash.com/photo-1616594039964-3f7f5f2f9d7b?w=900&q=80",
       description:
-        "Thoughtfully designed for ease and comfort with accessible pathways, adapted bathroom features, and seamless movement throughout the room.",
-      chips: ["ACCESSIBLE", "QUEEN BED", "WIDE ACCESS", "COMFORT FIRST"],
+      "Located walking distance from the main building, the suite provides a living room area with sofa bed and a stone fire.",
+      chips: ["ACCESSIBLE", "KING BED", "MOUNTAIN VIEW"],
     },
   ],
 };
