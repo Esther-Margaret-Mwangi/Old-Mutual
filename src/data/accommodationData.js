@@ -1,33 +1,36 @@
+import roomImage from "../assets/images/room1.jpg";
+import room2Image from "../assets/images/room2.jpg";
+import room3Image from "../assets/images/room3.jpg";
+import suitesImage from "../assets/images/suite1.jpg";
+import villasImage from "../assets/images/villa1.jpg";
+import bungalowsImage from "../assets/images/bungallow1.jpg";
+import accessibleImage from "../assets/images/acessible1.jpg";
+
 const accommodationTypes = [
   {
     id: "rooms",
     label: "ROOMS",
-    image:
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&q=80",
+    image: roomImage,
   },
   {
     id: "suites",
     label: "SUITES",
-    image:
-      "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=1200&q=80",
+    image: suitesImage,
   },
   {
     id: "villas",
     label: "VILLAS",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+    image: villasImage,
   },
   {
     id: "bungalows",
     label: "BUNGALOWS",
-    image:
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1200&q=80",
+    image: bungalowsImage,
   },
   {
     id: "accessible",
     label: "ACCESSIBLE",
-    image:
-      "https://images.unsplash.com/photo-1616594039964-3f7f5f2f9d7b?w=1200&q=80",
+    image: accessibleImage,
   },
 ];
 
@@ -40,8 +43,7 @@ const accommodationUnits = {
       size: "34 m2/365sqft",
       persons: "2 persons",
       extra: "",
-      image:
-        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=900&q=80",
+      image: roomImage,
       description:
         "Elegantly designed for 2 adults, this spacious deluxe room features a fireplace, plush bedding, a private bathroom, and serene garden or Mount Kenya views. Enjoy signature Fairmont touches like a tea/coffee station, cozy seating, and ample wardrobe space.",
       chips: [
@@ -58,8 +60,7 @@ const accommodationUnits = {
       size: "34 m2/365sqft",
       persons: "2 persons",
       extra: "Mountain view",
-      image:
-        "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=900&q=80",
+      image: room2Image,
       description:
         "Designed for comfort and flexibility, this twin-bed deluxe room offers classic Safari Club charm with generous space, en-suite bathroom, and scenic mountain outlooks.",
       chips: ["UP TO 2 GUESTS", "TWIN BEDS", "MOUNTAIN VIEW", "FIREPLACE"],
@@ -71,8 +72,7 @@ const accommodationUnits = {
       size: "43 m2/462sqft",
       persons: "3 persons",
       extra: "River side",
-      image:
-        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80",
+      image: room3Image,
       description:
         "Set near tranquil waters, the Riverside Deluxe room blends warm interiors with expanded living space and relaxing views. Perfect for couples or small families.",
       chips: ["UP TO 3 GUESTS", "QUEEN BED", "RIVERSIDE", "LARGE ROOM"],
