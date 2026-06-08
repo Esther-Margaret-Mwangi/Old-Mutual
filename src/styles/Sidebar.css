@@ -44,7 +44,7 @@
 
 .sidebar-brand-name {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 1.72rem;
+  font-size: 18px;
   font-weight: 700;
   color: var(--fm-black);
 }
@@ -85,7 +85,7 @@
   border-radius: 10px;
   text-decoration: none;
   color: var(--fm-black);
-  font-size: 1.05rem;
+  font-size: 15px;
   font-weight: 600;
   transition:
     background 0.2s,

@@ -1,7 +1,7 @@
 .ac-page {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .ac-type-card {
@@ -37,7 +37,7 @@
   left: 14px;
   bottom: 12px;
   color: #fff;
-  font-size: 1.08rem;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.02em;
   z-index: 1;

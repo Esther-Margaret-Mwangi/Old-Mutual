@@ -1,7 +1,7 @@
 .dine {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 /* ── Tabs ── */
@@ -21,7 +21,7 @@
   padding: 8px 18px;
   border: 0;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   background: transparent;
@@ -41,7 +41,7 @@
 .dine-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .dine-card {
@@ -77,20 +77,20 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 14px 16px 16px;
+  padding: 18px 18px 18px;
   z-index: 1;
 }
 
 .dine-card-copy h3 {
-  font-size: 0.94rem;
+  font-size: 15px;
   font-weight: 600;
   color: var(--fm-white);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   line-height: 1.2;
 }
 
 .dine-card-copy p {
-  font-size: 0.74rem;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.4;
   display: -webkit-box;

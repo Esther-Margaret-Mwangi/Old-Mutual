@@ -48,7 +48,7 @@
   border-radius: 999px;
   background: rgba(17, 17, 17, 0.45);
   backdrop-filter: blur(2px);
-  font-size: 0.86rem;
+  font-size: 13px;
   font-weight: 500;
   color: var(--fm-white);
   text-shadow: 0 1px 6px rgba(17, 17, 17, 0.5);
@@ -56,14 +56,14 @@
 }
 
 .ed-content {
-  padding: 24px 18px 34px;
+  padding: 28px 18px 36px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 .ed-title {
-  font-size: 1.28rem;
+  font-size: 18px;
   line-height: 1.24;
   font-weight: 600;
   color: var(--fm-black);
@@ -71,7 +71,7 @@
 
 .ed-desc {
   color: var(--fm-gray-700);
-  font-size: 0.9rem;
+  font-size: 13px;
   line-height: 1.55;
 }
 
@@ -79,7 +79,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .ed-highlights li {
@@ -87,7 +87,7 @@
   align-items: center;
   gap: 10px;
   color: var(--fm-black);
-  font-size: 0.92rem;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -97,23 +97,23 @@
 }
 
 .ed-section h2 {
-  font-size: 1.16rem;
+  font-size: 15px;
   line-height: 1.25;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: var(--fm-black);
 }
 
 .ed-section p {
   color: var(--fm-gray-700);
-  font-size: 0.9rem;
+  font-size: 13px;
   line-height: 1.55;
 }
 
 .ed-venue-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 16px;
 }
 
 .ed-venue-card {
@@ -133,7 +133,7 @@
 
 .ed-venue-card p {
   text-align: center;
-  font-size: 0.72rem;
+  font-size: 12px;
   font-weight: 500;
   color: var(--fm-black);
   padding: 10px 8px 11px;
@@ -142,8 +142,8 @@
 .ed-chip-panel {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 4px;
+  gap: 12px;
+  margin-top: 6px;
 }
 
 .ed-chip {
@@ -152,7 +152,7 @@
   justify-content: center;
   text-align: center;
   min-height: 36px;
-  font-size: 0.65rem;
+  font-size: 11px;
   font-weight: 600;
   color: var(--fm-black);
   padding: 7px 14px;

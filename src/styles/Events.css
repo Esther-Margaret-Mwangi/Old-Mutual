@@ -1,7 +1,7 @@
 .events {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .events-card {
@@ -37,21 +37,21 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 14px 14px 16px;
+  padding: 18px 18px 18px;
   z-index: 1;
 }
 
 .events-card-copy h3 {
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .events-card-copy p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.77rem;
+  font-size: 12px;
   line-height: 1.35;
   display: -webkit-box;
   -webkit-line-clamp: 2;

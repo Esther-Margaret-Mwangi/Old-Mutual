@@ -4,12 +4,16 @@
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 60px);
-  gap: 12px;
+  gap: 16px;
   color: #888;
   font-family: "Georgia", serif;
 }
 
 .placeholder h1 {
-  font-size: 2rem;
+  font-size: 18px;
   color: #8b6914;
+}
+
+.placeholder p {
+  font-size: 13px;
 }

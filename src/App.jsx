@@ -11,6 +11,7 @@ import RestaurantDetail from "./pages/RestaurantDetail";
 import EventDetail from "./pages/EventDetail";
 import Placeholder from "./pages/Placeholder";
 import ActivityDetail from "./pages/ActivityDetail";
+import AllPeople from "./pages/AllPeople";
 import "./styles/App.css";
 
 const searchBtn = (
@@ -80,6 +81,16 @@ function App() {
             <div className="layout">
               <div className="app-shell app-shell--flush">
                 <AccommodationDetail />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/all-people"
+          element={
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <AllPeople />
               </div>
             </div>
           }

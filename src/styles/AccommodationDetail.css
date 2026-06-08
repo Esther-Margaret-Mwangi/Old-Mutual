@@ -48,7 +48,7 @@
   border-radius: 999px;
   background: rgba(17, 17, 17, 0.45);
   backdrop-filter: blur(2px);
-  font-size: 0.86rem;
+  font-size: 13px;
   font-weight: 500;
   color: var(--fm-white);
   text-shadow: 0 1px 6px rgba(17, 17, 17, 0.5);
@@ -56,14 +56,14 @@
 }
 
 .acd-content {
-  padding: 22px 16px 30px;
+  padding: 26px 18px 34px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .acd-content h1 {
-  font-size: 1.22rem;
+  font-size: 18px;
   line-height: 1.25;
   font-weight: 700;
   color: var(--fm-black);
@@ -71,7 +71,7 @@
 
 .acd-desc {
   color: var(--fm-gray-700);
-  font-size: 0.92rem;
+  font-size: 13px;
   line-height: 1.52;
 }
 
@@ -79,7 +79,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .acd-facts li {
@@ -87,7 +87,7 @@
   align-items: center;
   gap: 8px;
   color: var(--fm-black);
-  font-size: 0.92rem;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -108,7 +108,7 @@
   padding: 6px;
   border-right: 1px solid var(--fm-gray-300);
   border-bottom: 1px solid var(--fm-gray-300);
-  font-size: 0.72rem;
+  font-size: 12px;
   font-weight: 600;
   color: var(--fm-black);
 }

@@ -1,7 +1,7 @@
 .home-mobile {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 24px;
 }
 
 .home-hero-card {
@@ -9,7 +9,7 @@
   height: 292px;
   border-radius: 18px;
   overflow: hidden;
-  background-image: url("../assets/images/fairmont.jpg");
+  background-image: url("../assets/images/fairmont2.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 8px 18px rgba(17, 17, 17, 0.12);
@@ -31,7 +31,7 @@
   gap: 5px;
   padding: 6px 10px;
   border-radius: 999px;
-  font-size: 0.7rem;
+  font-size: 11px;
   font-weight: 600;
   color: var(--fm-black);
   background: rgba(255, 255, 255, 0.9);
@@ -51,18 +51,14 @@
 
 .home-hero-copy {
   position: absolute;
-  left: 14px;
-  right: 14px;
+  left: 16px;
+  right: 16px;
   bottom: 14px;
   z-index: 2;
-  padding: 11px;
-  border-radius: 12px;
-  background: rgba(17, 17, 17, 0.32);
-  backdrop-filter: blur(2px);
 }
 
 .home-hero-copy h2 {
-  font-size: 1.13rem;
+  font-size: 18px;
   line-height: 1.24;
   font-weight: 600;
   color: var(--fm-white);
@@ -72,8 +68,9 @@
 
 .home-hero-copy p {
   color: rgba(255, 255, 255, 0.94);
-  font-size: 0.86rem;
+  font-size: 13px;
   line-height: 1.4;
+  text-shadow: 0 2px 8px rgba(17, 17, 17, 0.35);
 }
 
 .home-section {
@@ -84,12 +81,12 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .home-section-title {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 1.2rem;
+  font-size: 18px;
   line-height: 1.3;
   font-weight: 600;
   color: var(--fm-black);
@@ -99,23 +96,25 @@
   border: 0;
   background: transparent;
   color: var(--fm-complement);
-  font-size: 0.74rem;
+  font-size: 13px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .facilitator-list {
   background: var(--fm-white);
   border-radius: 16px;
   border: 1px solid var(--fm-gray-100);
-  padding: 3px 12px;
+  padding: 6px 12px;
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.05);
 }
 
 .facilitator-item {
   display: grid;
-  grid-template-columns: 54px 1fr auto;
+  grid-template-columns: 54px 1fr;
   align-items: center;
-  gap: 10px;
-  padding: 9px 0;
+  gap: 12px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--fm-gray-100);
 }
 
@@ -131,40 +130,17 @@
 }
 
 .facilitator-item h4 {
-  font-size: 0.95rem;
+  font-size: 15px;
   line-height: 1.25;
   font-weight: 600;
   color: var(--fm-black);
   margin-bottom: 2px;
 }
 
-.facilitator-item p {
-  color: var(--fm-gray-500);
-  font-size: 0.72rem;
-}
-
-.facilitator-item button {
-  border: 0;
-  background: transparent;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  color: var(--fm-gray-700);
-}
-
-.heart-active {
-  color: #b70013;
-}
-
-.heart-idle {
-  color: var(--fm-black);
-}
-
 .home-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
 }
 
 .home-grid-card {
@@ -176,25 +152,25 @@
 }
 
 .home-grid-image {
-  height: 96px;
+  height: 132px;
   background-size: cover;
   background-position: center;
 }
 
 .home-grid-body {
-  padding: 8px;
+  padding: 12px;
 }
 
 .home-grid-row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 6px;
-  margin-bottom: 3px;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
 .home-grid-row h4 {
-  font-size: 0.96rem;
+  font-size: 14px;
   font-weight: 600;
   color: var(--fm-black);
   line-height: 1.2;
@@ -204,7 +180,7 @@
 .home-grid-cta {
   border: 0;
   background: transparent;
-  font-size: 0.68rem;
+  font-size: 13px;
   font-weight: 600;
   color: var(--fm-complement);
   white-space: nowrap;
@@ -214,7 +190,7 @@
 
 .home-grid-body p {
   color: var(--fm-gray-700);
-  font-size: 0.72rem;
+  font-size: 12px;
   line-height: 1.36;
 }
 
