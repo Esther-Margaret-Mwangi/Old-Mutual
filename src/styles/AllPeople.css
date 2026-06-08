@@ -1,7 +1,7 @@
 .all-people-page {
   min-height: 100%;
-  background: var(--fm-gray-50);
-  padding: 18px 14px 28px;
+  background: var(--fm-white);
+  padding: 18px var(--fm-page-padding) 28px;
 }
 
 .all-people-header {

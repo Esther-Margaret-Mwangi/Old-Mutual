@@ -3,7 +3,7 @@ import {
   Home,
   Calendar,
   UtensilsCrossed,
-  Sparkles,
+  PartyPopper,
   BedDouble,
   X,
 } from "lucide-react";
@@ -13,7 +13,7 @@ const navItems = [
   { label: "Home", path: "/", icon: Home },
   { label: "Agenda", path: "/agenda", icon: Calendar },
   { label: "Dine", path: "/dine", icon: UtensilsCrossed },
-  { label: "Events", path: "/events", icon: Sparkles },
+  { label: "Events", path: "/events", icon: PartyPopper },
   { label: "Accommodation", path: "/accommodation", icon: BedDouble },
 ];
 

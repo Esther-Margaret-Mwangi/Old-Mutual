@@ -113,7 +113,7 @@
 
 /* ── Content area ── */
 .act-content {
-  padding: 24px 18px 36px;
+  padding: 24px var(--fm-page-padding) 36px;
   display: flex;
   flex-direction: column;
   gap: 18px;

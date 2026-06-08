@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import { useSearch } from "../context/SearchContext";
-import SearchBar from "./SearchBar";
+import SearchPanel from "./SearchPanel";
 import Sidebar from "./Sidebar";
 import "../styles/Layout.css";
 
@@ -14,7 +13,6 @@ export default function Layout({
   searchPlaceholder,
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const { isOpen } = useSearch();
 
   return (
     <div className="layout">
@@ -45,11 +43,7 @@ export default function Layout({
           </div>
         </header>
 
-        {searchable && isOpen && (
-          <div className="layout-search">
-            <SearchBar placeholder={searchPlaceholder} />
-          </div>
-        )}
+        {searchable && <SearchPanel placeholder={searchPlaceholder} />}
 
         <main className="layout-main">{children}</main>
       </div>

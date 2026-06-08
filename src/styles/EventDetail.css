@@ -56,7 +56,7 @@
 }
 
 .ed-content {
-  padding: 28px 18px 36px;
+  padding: 28px var(--fm-page-padding) 36px;
   display: flex;
   flex-direction: column;
   gap: 20px;

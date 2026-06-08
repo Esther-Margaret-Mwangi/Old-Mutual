@@ -16,7 +16,7 @@ export default function AllPeople() {
         >
           <ArrowLeft size={18} />
         </button>
-        <h1>Facilitators</h1>
+        <h1>Key People</h1>
       </header>
 
       <section className="all-people-list">

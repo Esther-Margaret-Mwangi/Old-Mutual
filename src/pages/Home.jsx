@@ -33,7 +33,7 @@ export default function Home() {
 
       <section className="home-section">
         <div className="home-section-heading">
-          <h3 className="home-section-title">Facilitators</h3>
+          <h3 className="home-section-title">Key People</h3>
           <Link to="/all-people" className="home-section-link">
             See more
           </Link>

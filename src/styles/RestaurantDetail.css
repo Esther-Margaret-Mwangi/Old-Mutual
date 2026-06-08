@@ -68,7 +68,7 @@
 
 /* ── Content ── */
 .rd-content {
-  padding: 24px 18px 34px;
+  padding: 24px var(--fm-page-padding) 34px;
   display: flex;
   flex-direction: column;
   gap: 16px;

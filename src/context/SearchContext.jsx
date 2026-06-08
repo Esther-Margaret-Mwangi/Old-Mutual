@@ -19,7 +19,10 @@ export function SearchProvider({ children }) {
       setQuery,
       isOpen,
       toggleSearch: () => setIsOpen((open) => !open),
-      closeSearch: () => setIsOpen(false),
+      closeSearch: () => {
+        setIsOpen(false);
+        setQuery("");
+      },
       clearQuery: () => setQuery(""),
     }),
     [query, isOpen],

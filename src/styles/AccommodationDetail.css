@@ -56,7 +56,7 @@
 }
 
 .acd-content {
-  padding: 26px 18px 34px;
+  padding: 26px var(--fm-page-padding) 34px;
   display: flex;
   flex-direction: column;
   gap: 18px;
