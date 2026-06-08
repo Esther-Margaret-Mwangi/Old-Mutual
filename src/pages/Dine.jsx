@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import SearchEmpty from "../components/SearchEmpty";
+import { useSearch } from "../context/SearchContext";
 import dineData from "../data/dineData";
+import { matchesSearch } from "../utils/search";
 import "../styles/Dine.css";
 
 export default function Dine() {
   const [activeTab, setActiveTab] = useState("restaurants");
-  const items =
-    activeTab === "restaurants" ? dineData.restaurants : dineData.bars;
+  const { query } = useSearch();
+
+  const items = useMemo(() => {
+    const list =
+      activeTab === "restaurants" ? dineData.restaurants : dineData.bars;
+
+    return list.filter((item) =>
+      matchesSearch(
+        query,
+        item.name,
+        item.subtitle,
+        item.description,
+        ...(item.tags ?? []),
+      ),
+    );
+  }, [activeTab, query]);
 
   return (
     <div className="dine">
@@ -28,6 +45,7 @@ export default function Dine() {
 
       {/* ── Card list ── */}
       <div className="dine-list">
+        {items.length === 0 && <SearchEmpty />}
         {items.map((item) => (
           <Link
             key={item.id}

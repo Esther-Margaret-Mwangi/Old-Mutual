@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Search } from "lucide-react";
 import Layout from "./components/Layout";
+import SearchButton from "./components/SearchButton";
+import { SearchProvider } from "./context/SearchContext";
 import Home from "./pages/Home";
 import Dine from "./pages/Dine";
 import Events from "./pages/Events";
@@ -10,20 +11,16 @@ import AccommodationDetail from "./pages/AccommodationDetail";
 import RestaurantDetail from "./pages/RestaurantDetail";
 import EventDetail from "./pages/EventDetail";
 import Placeholder from "./pages/Placeholder";
+import Agenda from "./pages/Agenda";
 import ActivityDetail from "./pages/ActivityDetail";
 import AllPeople from "./pages/AllPeople";
 import AllActivities from "./pages/AllActivities";
 import "./styles/App.css";
 
-const searchBtn = (
-  <button className="topbar-search-btn" aria-label="Search">
-    <Search size={17} />
-  </button>
-);
-
 function App() {
   return (
     <BrowserRouter>
+      <SearchProvider>
       <Routes>
         {/* Full-screen detail pages — no Layout header */}
         <Route
@@ -99,11 +96,14 @@ function App() {
         <Route
           path="/all-activities"
           element={
-            <div className="layout">
-              <div className="app-shell app-shell--flush">
-                <AllActivities />
-              </div>
-            </div>
+            <Layout
+              pageTitle="All Activities"
+              searchable
+              searchPlaceholder="Search activities..."
+              headerRight={<SearchButton />}
+            >
+              <AllActivities />
+            </Layout>
           }
         />
 
@@ -119,23 +119,26 @@ function App() {
         <Route
           path="/dine"
           element={
-            <Layout pageTitle="Dine" headerRight={searchBtn}>
+            <Layout
+              pageTitle="Dine"
+              searchable
+              searchPlaceholder="Search restaurants and bars..."
+              headerRight={<SearchButton />}
+            >
               <Dine />
             </Layout>
           }
         />
-        <Route
-          path="/agenda"
-          element={
-            <Layout pageTitle="Agenda">
-              <Placeholder title="Agenda" />
-            </Layout>
-          }
-        />
+        <Route path="/agenda" element={<Agenda />} />
         <Route
           path="/events"
           element={
-            <Layout pageTitle="Events" headerRight={searchBtn}>
+            <Layout
+              pageTitle="Events"
+              searchable
+              searchPlaceholder="Search events..."
+              headerRight={<SearchButton />}
+            >
               <Events />
             </Layout>
           }
@@ -143,12 +146,18 @@ function App() {
         <Route
           path="/accommodation"
           element={
-            <Layout pageTitle="Accommodation" headerRight={searchBtn}>
+            <Layout
+              pageTitle="Accommodation"
+              searchable
+              searchPlaceholder="Search accommodation..."
+              headerRight={<SearchButton />}
+            >
               <Accommodation />
             </Layout>
           }
         />
       </Routes>
+      </SearchProvider>
     </BrowserRouter>
   );
 }

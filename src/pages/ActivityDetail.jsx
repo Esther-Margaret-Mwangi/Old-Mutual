@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Heart, Image } from "lucide-react";
-import experiences from "../data/experiences";
+import activities from "../data/activitiesData";
 import "../styles/ActivityDetail.css";
 
 export default function ActivityDetail() {
@@ -9,7 +9,7 @@ export default function ActivityDetail() {
   const navigate = useNavigate();
   const [liked, setLiked] = useState(false);
 
-  const activity = experiences.find((e) => e.id === id);
+  const activity = activities.find((item) => item.id === id);
 
   if (!activity) {
     return (
@@ -56,17 +56,24 @@ export default function ActivityDetail() {
 
         <p className="act-desc">{activity.description}</p>
 
-        {/* gallery */}
-        <div className="act-gallery-heading">
-          <Image size={15} />
-          <span>Photo Gallery</span>
-        </div>
+        {(activity.gallery?.length ?? 0) > 0 && (
+          <>
+            <div className="act-gallery-heading">
+              <Image size={15} />
+              <span>Photo Gallery</span>
+            </div>
 
-        <div className="act-gallery">
-          {activity.gallery.map((src, i) => (
-            <img key={i} src={src} alt={`${activity.title} photo ${i + 1}`} />
-          ))}
-        </div>
+            <div className="act-gallery">
+              {activity.gallery.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`${activity.title} photo ${i + 1}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
