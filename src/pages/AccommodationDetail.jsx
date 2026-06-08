@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Bed, Ruler, UserRound } from "lucide-react";
 import { accommodationUnits } from "../data/accommodationData";
+import useHeroStatusTone from "../utils/useHeroStatusTone";
 import "../styles/AccommodationDetail.css";
 
 export default function AccommodationDetail() {
@@ -10,6 +11,7 @@ export default function AccommodationDetail() {
   const unit = (accommodationUnits[typeId] || []).find(
     (item) => item.id === unitId,
   );
+  const heroTone = useHeroStatusTone(unit?.image);
 
   if (!unit) {
     return (
@@ -21,7 +23,7 @@ export default function AccommodationDetail() {
   }
 
   return (
-    <div className="acd-shell">
+    <div className="acd-shell" data-status-tone={heroTone}>
       <div className="acd-hero">
         <img src={unit.image} alt={unit.name} className="acd-hero-img" />
         <button

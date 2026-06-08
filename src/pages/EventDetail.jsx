@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import eventsData from "../data/eventsData";
+import useHeroStatusTone from "../utils/useHeroStatusTone";
 import "../styles/EventDetail.css";
 
 export default function EventDetail() {
@@ -8,6 +9,7 @@ export default function EventDetail() {
   const navigate = useNavigate();
 
   const event = eventsData.find((item) => item.id === id);
+  const heroTone = useHeroStatusTone(event?.image);
 
   if (!event) {
     return (
@@ -19,7 +21,7 @@ export default function EventDetail() {
   }
 
   return (
-    <div className="ed-shell">
+    <div className="ed-shell" data-status-tone={heroTone}>
       <div className="ed-hero">
         <img src={event.image} alt={event.title} className="ed-hero-img" />
 

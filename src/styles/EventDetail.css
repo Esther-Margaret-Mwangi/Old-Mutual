@@ -7,8 +7,9 @@
 
 .ed-hero {
   position: relative;
-  height: 350px;
+  height: clamp(320px, 46vh, 430px);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .ed-hero-img {
@@ -20,7 +21,7 @@
 
 .ed-back-btn {
   position: absolute;
-  top: 44px;
+  top: calc(var(--fm-safe-top) + 12px);
   left: 14px;
   width: 38px;
   height: 38px;
@@ -38,7 +39,7 @@
 
 .ed-hero-pill {
   position: absolute;
-  top: 50px;
+  top: calc(var(--fm-safe-top) + 18px);
   left: 50%;
   transform: translateX(-50%);
   display: inline-flex;
@@ -55,8 +56,30 @@
   z-index: 2;
 }
 
+.ed-shell[data-status-tone="light"] .ed-back-btn {
+  background: rgba(17, 17, 17, 0.45);
+  color: var(--fm-white);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.ed-shell[data-status-tone="dark"] .ed-back-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--fm-black);
+}
+
+.ed-shell[data-status-tone="light"] .ed-hero-pill {
+  background: rgba(17, 17, 17, 0.46);
+  color: var(--fm-white);
+}
+
+.ed-shell[data-status-tone="dark"] .ed-hero-pill {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--fm-black);
+  text-shadow: none;
+}
+
 .ed-content {
-  padding: 28px var(--fm-page-padding) 36px;
+  padding: 28px var(--fm-page-padding) calc(36px + var(--fm-safe-bottom));
   display: flex;
   flex-direction: column;
   gap: 20px;

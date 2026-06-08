@@ -9,8 +9,9 @@
 /* ── Hero ── */
 .act-hero {
   position: relative;
-  height: 340px;
+  height: clamp(320px, 45vh, 420px);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .act-hero-img {
@@ -23,7 +24,7 @@
 /* floating action buttons */
 .act-fab {
   position: absolute;
-  top: 44px;
+  top: calc(var(--fm-safe-top) + 12px);
   width: 38px;
   height: 38px;
   border-radius: 999px;
@@ -58,7 +59,7 @@
 /* centered title over hero */
 .act-hero-title {
   position: absolute;
-  top: 50px;
+  top: calc(var(--fm-safe-top) + 18px);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -76,6 +77,36 @@
   text-shadow: 0 1px 6px rgba(17, 17, 17, 0.55);
   pointer-events: none;
   z-index: 2;
+}
+
+.act-shell[data-status-tone="light"] .act-fab {
+  background: rgba(17, 17, 17, 0.45);
+  color: var(--fm-white);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.act-shell[data-status-tone="dark"] .act-fab {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--fm-black);
+}
+
+.act-shell[data-status-tone="light"] .act-fab--liked {
+  color: #ffd1d6;
+}
+
+.act-shell[data-status-tone="dark"] .act-fab--liked {
+  color: #b70013;
+}
+
+.act-shell[data-status-tone="light"] .act-hero-title {
+  background: rgba(17, 17, 17, 0.46);
+  color: var(--fm-white);
+}
+
+.act-shell[data-status-tone="dark"] .act-hero-title {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--fm-black);
+  text-shadow: none;
 }
 
 /* ── Thumbnail strip ── */
@@ -113,7 +144,7 @@
 
 /* ── Content area ── */
 .act-content {
-  padding: 24px var(--fm-page-padding) 36px;
+  padding: 24px var(--fm-page-padding) calc(36px + var(--fm-safe-bottom));
   display: flex;
   flex-direction: column;
   gap: 18px;

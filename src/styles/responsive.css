@@ -4,6 +4,10 @@
 
 /* ── Tablet ── */
 @media (min-width: 640px) {
+  :root {
+    --fm-page-padding: 20px;
+  }
+
   .home-hero-card {
     height: 340px;
   }
@@ -33,16 +37,18 @@
     gap: 16px;
   }
 
-  .act-hero,
-  .ed-hero,
-  .rd-hero,
-  .acd-hero {
-    height: 400px;
+  .act-gallery,
+  .ed-venue-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 /* ── Desktop ── */
 @media (min-width: 1024px) {
+  :root {
+    --fm-page-padding: 24px;
+  }
+
   .layout {
     background: var(--fm-white);
   }
@@ -95,10 +101,19 @@
     margin: 0 auto;
     width: 100%;
   }
+
+  .act-gallery,
+  .ed-venue-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* ── Small phones ── */
 @media (max-width: 380px) {
+  :root {
+    --fm-page-padding: 14px;
+  }
+
   .home-grid {
     grid-template-columns: 1fr;
   }
@@ -115,5 +130,23 @@
 
   .acl-card-image {
     height: 160px;
+  }
+
+  .act-fab,
+  .acd-back-btn,
+  .ed-back-btn,
+  .rd-back-btn {
+    width: 34px;
+    height: 34px;
+    top: calc(var(--fm-safe-top) + 8px);
+  }
+
+  .act-hero-title,
+  .acd-hero-pill,
+  .ed-hero-pill,
+  .rd-hero-label {
+    top: calc(var(--fm-safe-top) + 13px);
+    font-size: 12px;
+    padding: 5px 14px;
   }
 }

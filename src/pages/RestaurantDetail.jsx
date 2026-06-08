@@ -1,6 +1,7 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import dineData from "../data/dineData";
+import useHeroStatusTone from "../utils/useHeroStatusTone";
 import "../styles/RestaurantDetail.css";
 
 export default function RestaurantDetail() {
@@ -13,6 +14,7 @@ export default function RestaurantDetail() {
   const fallback = [...dineData.restaurants, ...dineData.bars];
   const venue =
     source.find((v) => v.id === id) || fallback.find((v) => v.id === id);
+  const heroTone = useHeroStatusTone(venue?.image);
 
   if (!venue) {
     return (
@@ -24,7 +26,7 @@ export default function RestaurantDetail() {
   }
 
   return (
-    <div className="rd-shell">
+    <div className="rd-shell" data-status-tone={heroTone}>
       {/* ── Hero ── */}
       <div className="rd-hero">
         <img src={venue.image} alt={venue.name} className="rd-hero-img" />

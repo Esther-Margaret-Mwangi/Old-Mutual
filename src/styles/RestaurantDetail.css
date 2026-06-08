@@ -9,8 +9,9 @@
 /* ── Hero ── */
 .rd-hero {
   position: relative;
-  height: 340px;
+  height: clamp(320px, 45vh, 420px);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .rd-hero-img {
@@ -23,7 +24,7 @@
 /* back button */
 .rd-back-btn {
   position: absolute;
-  top: 44px;
+  top: calc(var(--fm-safe-top) + 12px);
   left: 14px;
   width: 38px;
   height: 38px;
@@ -47,7 +48,7 @@
 /* centered label over hero */
 .rd-hero-label {
   position: absolute;
-  top: 50px;
+  top: calc(var(--fm-safe-top) + 18px);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -66,9 +67,31 @@
   z-index: 2;
 }
 
+.rd-shell[data-status-tone="light"] .rd-back-btn {
+  background: rgba(17, 17, 17, 0.45);
+  color: var(--fm-white);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.rd-shell[data-status-tone="dark"] .rd-back-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--fm-black);
+}
+
+.rd-shell[data-status-tone="light"] .rd-hero-label {
+  background: rgba(17, 17, 17, 0.46);
+  color: var(--fm-white);
+}
+
+.rd-shell[data-status-tone="dark"] .rd-hero-label {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--fm-black);
+  text-shadow: none;
+}
+
 /* ── Content ── */
 .rd-content {
-  padding: 24px var(--fm-page-padding) 34px;
+  padding: 24px var(--fm-page-padding) calc(34px + var(--fm-safe-bottom));
   display: flex;
   flex-direction: column;
   gap: 16px;

@@ -3,6 +3,8 @@
 
 :root {
   --fm-page-padding: 18px;
+  --fm-safe-top: env(safe-area-inset-top, 0px);
+  --fm-safe-bottom: env(safe-area-inset-bottom, 0px);
   --fm-black: #111111;
   --fm-white: #ffffff;
   --fm-gray-50: #f3f4f6;
@@ -25,6 +27,7 @@
 
 html {
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 body {
@@ -33,6 +36,12 @@ body {
   color: var(--fm-black);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img {

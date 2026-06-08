@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Heart, Image } from "lucide-react";
 import activities from "../data/activitiesData";
+import useHeroStatusTone from "../utils/useHeroStatusTone";
 import "../styles/ActivityDetail.css";
 
 export default function ActivityDetail() {
@@ -10,6 +11,7 @@ export default function ActivityDetail() {
   const [liked, setLiked] = useState(false);
 
   const activity = activities.find((item) => item.id === id);
+  const heroTone = useHeroStatusTone(activity?.hero);
 
   if (!activity) {
     return (
@@ -21,7 +23,7 @@ export default function ActivityDetail() {
   }
 
   return (
-    <div className="act-shell">
+    <div className="act-shell" data-status-tone={heroTone}>
       {/* ── Hero ── */}
       <div className="act-hero">
         <img
