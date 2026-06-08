@@ -1,3 +1,13 @@
+import weddingImage from "../assets/images/weddings.jpg";
+import wedding1Image from "../assets/images/wedding1.jpg";
+import wedding2Image from "../assets/images/weddings2.jpg";
+import wedding3Image from "../assets/images/weddings3.jpg";
+import meetingsImage from "../assets/images/meetings.jpg";
+import socialEventsImage from "../assets/images/social evnt.jpg";
+import mawingoImage from "../assets/images/mawingo.jpg";
+import outdoorImage from "../assets/images/outdoor venue.jpg";
+import minorImage from "../assets/images/kirinyaga minor.jpg";
+
 const eventsData = [
   {
     id: "meetings-conferences",
@@ -19,23 +29,19 @@ const eventsData = [
     venueCards: [
       {
         name: "KIRINYAGA BALLROOM",
-        image:
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=700&q=80",
+        image: meetingsImage,
       },
       {
         name: "MAWINGO BOARDROOM",
-        image:
-          "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=700&q=80",
+        image: mawingoImage,
       },
       {
         name: "OUTDOOR VENUES",
-        image:
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=700&q=80",
+        image: outdoorImage,
       },
       {
         name: "KIRINYAGA MINOR BALLROOM",
-        image:
-          "https://images.unsplash.com/photo-1511578314322-379afb476865?w=700&q=80",
+        image: minorImage,
       },
     ],
     chips: [
@@ -45,8 +51,7 @@ const eventsData = [
       "DEDICATED CONCIERGE",
       "OUTDOOR SPACES",
     ],
-    image:
-      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1200&q=80",
+    image: meetingsImage,
   },
   {
     id: "weddings",
@@ -54,42 +59,29 @@ const eventsData = [
     cardDescription:
       "Fairmont Mount Kenya Safari Club offers an array of indoor and outdoor ceremony spaces. Each unique setup creates unforgettable memories.",
     heroLabel: "Weddings",
-    heading: "ROMANTIC CELEBRATIONS",
+    heading: "Your Dream Wedding, Perfectly Crafted",
     description:
-      "From intimate ceremonies to grand receptions, our wedding team curates every detail to perfection. Celebrate your special day against stunning mountain and garden backdrops with bespoke menus and impeccable service.",
-    highlights: [
-      "Indoor & outdoor venues",
-      "Tailored menus",
-      "Dedicated planner",
-    ],
+      "Fairmont Mount Kenya Safari Club offers a magical wedding experience at the foot of Mount Kenya. Our historic property combines colonial charm with modern luxury. Choose from versatile venues with stunning views, from intimate gardens to elegant ballrooms. With exceptional service and attention to detail, your special day is sure to be unforgettable.",
+    highlights: ["4 venues", "Versatile venues", "Capacity for 500"],
     exploreTitle: "Explore Wedding Venues",
     exploreDescription:
       "Choose from lawns, terraces, and ballrooms designed to host beautiful wedding moments. Every space can be personalized for your style and guest experience.",
     venueCards: [
       {
-        name: "GARDEN CEREMONY",
-        image:
-          "https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=80",
+        image: wedding1Image,
       },
       {
-        name: "SUNSET TERRACE",
-        image:
-          "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=700&q=80",
+        image: weddingImage,
       },
       {
-        name: "GRAND BALLROOM",
-        image:
-          "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80",
+        image: wedding2Image,
       },
       {
-        name: "LAKESIDE RECEPTION",
-        image:
-          "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=700&q=80",
+        image: wedding3Image,
       },
     ],
-    chips: ["CUSTOM DECOR", "LIVE MUSIC", "PHOTO SPOTS", "PRIVATE DINING"],
-    image:
-      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80",
+    chips: ["UNIQUE SPACES", "SCENIC VIEWS"],
+    image: weddingImage,
   },
   {
     id: "social-events",
@@ -131,8 +123,7 @@ const eventsData = [
       },
     ],
     chips: ["LIVE CATERING", "OUTDOOR FIREPIT", "VIP LOUNGE", "A/V SUPPORT"],
-    image:
-      "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=1200&q=80",
+    image: socialEventsImage,
   },
 ];
 
