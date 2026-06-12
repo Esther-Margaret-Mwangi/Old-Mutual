@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
 import peopleData from "../data/peopleData";
 
+const HERO_IMAGE =
+  "https://res.cloudinary.com/dbo1334a9/image/upload/v1781256525/Event_Application_Headers_15_jf4cif.png";
+
 export default function Home() {
   return (
     <div className="home-mobile">
-      <section className="home-hero-card">
+      <section
+        className="home-hero-card"
+        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+      >
         <div className="home-hero-pills">
           <span>
             <MapPin size={13} /> Event
@@ -32,7 +38,7 @@ export default function Home() {
         </div>
 
         <div className="facilitator-list">
-          {peopleData.slice(0, 3).map((person) => (
+          {peopleData.map((person) => (
             <Link
               key={person.id}
               to={`/profile/${person.id}`}
@@ -41,6 +47,7 @@ export default function Home() {
               <img src={person.image} alt={person.name} />
               <div>
                 <h4>{person.name}</h4>
+                {person.team && <p>{person.team}</p>}
               </div>
             </Link>
           ))}

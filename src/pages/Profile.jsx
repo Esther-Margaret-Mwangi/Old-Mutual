@@ -1,14 +1,16 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Mail, Phone } from "lucide-react";
 import peopleData from "../data/peopleData";
-import heroBg from "../assets/images/bg1.jpeg";
 import useHeroStatusTone from "../utils/useHeroStatusTone";
 import "../styles/Profile.css";
+
+const PROFILE_HERO_IMAGE =
+  "https://res.cloudinary.com/dbo1334a9/image/upload/v1780400487/green-background_u0mw7x.jpg";
 
 export default function Profile() {
   const { id } = useParams();
   const navigate = useNavigate();
-  useHeroStatusTone(heroBg);
+  useHeroStatusTone(PROFILE_HERO_IMAGE);
   const person = peopleData.find((p) => String(p.id) === id);
 
   if (!person) {
@@ -24,7 +26,7 @@ export default function Profile() {
     <div className="profile-shell">
       <div
         className="profile-hero"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ backgroundImage: `url(${PROFILE_HERO_IMAGE})` }}
       >
         <button
           className="profile-back-btn"

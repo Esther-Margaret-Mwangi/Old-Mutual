@@ -1,69 +1,66 @@
 const peopleData = [
   {
     id: 1,
-    name: "Janet Lanet",
+    name: "Martin Karenju",
     image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=240&q=80",
-    team: "Sales Team",
-    description:
-      "Sales Lead skilled in building client relationships and closing high-value partnerships. Strong in negotiation, account management, and driving revenue growth.",
-    email: "janet@gmail.com",
-    phone: "+254 712 111 222",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781270236/Martin_Karenju_a2wuq0.jpg",
+    team: "Managing Director Old Mutual Life Assurance Kenya",
   },
   {
     id: 2,
-    name: "Karimi Johnson",
+    name: "Isaac Nzyoka",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&q=80",
-    team: "Sales Team",
-    description:
-      "Business Development Associate skilled in identifying new opportunities and nurturing client accounts. Strong in market research, lead generation, and relationship building.",
-    email: "karimi@gmail.com",
-    phone: "+254 712 222 333",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174014/Isaac_Nzyoka_i6givd.jpg",
+    team: "Kenya Chief Operating Officer",
   },
   {
     id: 3,
-    name: "Gabriella Mbone",
+    name: "Arthur Oginga",
     image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=240&q=80",
-    team: "Sales Team",
-    description:
-      "Client Relations Manager skilled in onboarding and supporting key accounts. Strong in communication, problem-solving, and ensuring client satisfaction.",
-    email: "gabriella@gmail.com",
-    phone: "+254 712 333 444",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174018/Arthur_Oginga_xqaodd.jpg",
+    team: "Chief Executive Officer Old Mutual Holdings Plc",
   },
   {
     id: 4,
-    name: "Joy Mutheu",
+    name: "Edith Jiya",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=240&q=80",
-    team: "Sales Team",
-    description:
-      "Sales Executive skilled in presenting tailored packages to corporate clients. Strong in proposal writing, follow-ups, and closing deals.",
-    email: "joy@gmail.com",
-    phone: "+254 712 444 555",
+      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    team: "Chief Executive Officer Old Mutual Holdings Plc Uganda",
   },
   {
     id: 5,
-    name: "Allan Otieno",
+    name: "Dr. Habil Olaka",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=240&q=80",
-    team: "Sales Team",
-    description:
-      "Account Manager skilled in coordinating with clients on event logistics and requirements. Strong in planning, vendor coordination, and on-site support.",
-    email: "allan@gmail.com",
-    phone: "+254 712 555 666",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174016/Dr_Habil_Olaka_gvw5ja.jpg",
+    team: "Chairperson Old Mutual Holdings Plc",
   },
   {
     id: 6,
-    name: "Lydia Wanjiku",
+    name: "Ken Njoroge",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=240&q=80",
-    team: "Sales Team",
-    description:
-      "Marketing & Sales Coordinator skilled in promoting packages and managing inquiries. Strong in digital outreach, scheduling, and customer engagement.",
-    email: "lydia@gmail.com",
-    phone: "+254 712 666 777",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781267457/Ken_Njoroge_siwmus.jpg",
+    team: "Speaker Strategy",
+  },
+  {
+    id: 7,
+    name: "Dr. Catherine Adeya",
+    image:
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174016/Dr_Catherine_Adeya_bm3gkp.jpg",
+    team: "Director Old Mutual Holdings Plc",
+  },
+  {
+    id: 8,
+    name: "Isaiah Gakonyo",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    team: "Ag. Group Chief Financial Officer",
+  },
+  {
+    id: 9,
+    name: "Robert Mbugua",
+    image:
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781267457/Robert_Mbugua_oyfjee.jpg",
+    team: "Old Mutual",
   },
 ];
 
