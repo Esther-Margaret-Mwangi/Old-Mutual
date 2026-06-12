@@ -15,6 +15,7 @@ import Agenda from "./pages/Agenda";
 import ActivityDetail from "./pages/ActivityDetail";
 import AllPeople from "./pages/AllPeople";
 import AllActivities from "./pages/AllActivities";
+import About from "./pages/About";
 import "./styles/App.css";
 
 function App() {
@@ -99,6 +100,16 @@ function App() {
             <div className="layout">
               <div className="app-shell app-shell--flush">
                 <AllActivities />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <About />
               </div>
             </div>
           }

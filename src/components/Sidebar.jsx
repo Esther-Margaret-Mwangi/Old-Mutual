@@ -5,6 +5,7 @@ import {
   UtensilsCrossed,
   PartyPopper,
   BedDouble,
+  Info,
   X,
 } from "lucide-react";
 import logoImage from "../assets/images/flogo1.jpeg";
@@ -16,6 +17,7 @@ const navItems = [
   { label: "Dine", path: "/dine", icon: UtensilsCrossed },
   { label: "Events", path: "/events", icon: PartyPopper },
   { label: "Accommodation", path: "/accommodation", icon: BedDouble },
+  { label: "About App", path: "/about", icon: Info },
 ];
 
 export default function Sidebar({ isOpen, onClose }) {
@@ -56,6 +58,10 @@ export default function Sidebar({ isOpen, onClose }) {
             </NavLink>
           ))}
         </nav>
+
+        <div className="sidebar-footer">
+          <p>Powered by Stawi Experiences</p>
+        </div>
       </aside>
     </>
   );
