@@ -99,6 +99,14 @@
   width: 100%;
 }
 
+.layout-subheader {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--fm-page-padding);
+}
+
 .layout-main {
   flex: 1;
   overflow-y: auto;

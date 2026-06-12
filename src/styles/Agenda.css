@@ -23,22 +23,11 @@
   white-space: nowrap;
 }
 
-.agenda-page {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
 .agenda-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background: var(--fm-white);
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin: -12px calc(-1 * var(--fm-page-padding)) 0;
-  padding: 12px var(--fm-page-padding) 8px;
+  gap: 14px;
+  padding-bottom: 6px;
 }
 
 .agenda-dates {

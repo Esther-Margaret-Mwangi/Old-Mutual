@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
+import SearchButton from "../components/SearchButton";
 import SearchEmpty from "../components/SearchEmpty";
 import { useSearch } from "../context/SearchContext";
 import dineData from "../data/dineData";
@@ -26,9 +28,12 @@ export default function Dine() {
   }, [activeTab, query]);
 
   return (
-    <div className="dine">
-      {/* ── Tabs ── */}
-      <div className="dine-tabs-bar">
+    <Layout
+      pageTitle="Dine"
+      searchable
+      searchPlaceholder="Search restaurants and bars..."
+      headerRight={<SearchButton />}
+      subHeader={
         <div className="dine-tabs">
           <button
             className={`dine-tab ${activeTab === "restaurants" ? "dine-tab--active" : ""}`}
@@ -43,9 +48,8 @@ export default function Dine() {
             🍷 Bars
           </button>
         </div>
-      </div>
-
-      {/* ── Card list ── */}
+      }
+    >
       <div className="dine-list">
         {items.length === 0 && <SearchEmpty />}
         {items.map((item) => (
@@ -67,6 +71,6 @@ export default function Dine() {
           </Link>
         ))}
       </div>
-    </div>
+    </Layout>
   );
 }

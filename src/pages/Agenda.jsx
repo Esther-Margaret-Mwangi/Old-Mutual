@@ -66,8 +66,7 @@ export default function Agenda() {
           </button>
         </div>
       }
-    >
-      <div className="agenda-page">
+      subHeader={
         <div className="agenda-sticky">
           <div className="agenda-dates" aria-label="Event date">
             <button
@@ -95,42 +94,42 @@ export default function Agenda() {
             </p>
           </section>
         </div>
+      }
+    >
+      <div className="agenda-list">
+        {sessions.length === 0 && <SearchEmpty />}
+        {sessions.map((session) => (
+          <article key={session.id} className="agenda-item">
+            <time className="agenda-item-time" dateTime={session.startTime}>
+              {formatTime(session.startTime)}
+            </time>
 
-        <div className="agenda-list">
-          {sessions.length === 0 && <SearchEmpty />}
-          {sessions.map((session) => (
-            <article key={session.id} className="agenda-item">
-              <time className="agenda-item-time" dateTime={session.startTime}>
-                {formatTime(session.startTime)}
-              </time>
+            <div className="agenda-card">
+              <div className="agenda-card-stripe" aria-hidden="true" />
 
-              <div className="agenda-card">
-                <div className="agenda-card-stripe" aria-hidden="true" />
+              <div className="agenda-card-body">
+                <h2 className="agenda-card-title">{session.title}</h2>
 
-                <div className="agenda-card-body">
-                  <h2 className="agenda-card-title">{session.title}</h2>
-
-                  <ul className="agenda-card-meta">
-                    <li>
-                      <Clock size={14} />
-                      <span>
-                        {formatTimeRange(session.startTime, session.endTime)}
-                      </span>
-                    </li>
-                    <li>
-                      <User size={14} />
-                      <span>{session.audience}</span>
-                    </li>
-                    <li>
-                      <MapPin size={14} />
-                      <span>{session.location}</span>
-                    </li>
-                  </ul>
-                </div>
+                <ul className="agenda-card-meta">
+                  <li>
+                    <Clock size={14} />
+                    <span>
+                      {formatTimeRange(session.startTime, session.endTime)}
+                    </span>
+                  </li>
+                  <li>
+                    <User size={14} />
+                    <span>{session.audience}</span>
+                  </li>
+                  <li>
+                    <MapPin size={14} />
+                    <span>{session.location}</span>
+                  </li>
+                </ul>
               </div>
-            </article>
-          ))}
-        </div>
+            </div>
+          </article>
+        ))}
       </div>
     </Layout>
   );

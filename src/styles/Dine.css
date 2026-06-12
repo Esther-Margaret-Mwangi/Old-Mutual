@@ -1,19 +1,4 @@
-.dine {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 /* ── Tabs ── */
-.dine-tabs-bar {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background: var(--fm-white);
-  margin: -12px calc(-1 * var(--fm-page-padding)) 0;
-  padding: 12px var(--fm-page-padding) 4px;
-}
-
 .dine-tabs {
   display: flex;
   gap: 8px;

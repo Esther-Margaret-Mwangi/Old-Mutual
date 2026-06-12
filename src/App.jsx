@@ -135,19 +135,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/dine"
-          element={
-            <Layout
-              pageTitle="Dine"
-              searchable
-              searchPlaceholder="Search restaurants and bars..."
-              headerRight={<SearchButton />}
-            >
-              <Dine />
-            </Layout>
-          }
-        />
+        <Route path="/dine" element={<Dine />} />
         <Route path="/agenda" element={<Agenda />} />
         <Route
           path="/events"

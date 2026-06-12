@@ -16,7 +16,18 @@
       "Bash(pkill -f \"vite --port 5184\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5186/src/pages/AllActivities.jsx)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5186/src/styles/AllActivities.css)",
-      "Bash(pkill -f \"vite --port 5186\")"
+      "Bash(pkill -f \"vite --port 5186\")",
+      "Bash(npm run dev -- --port 5185 > /tmp/vite-dev.log 2>&1 & *)",
+      "Bash(which chromium *)",
+      "Read(//home/esthermwangi/.cache/**)",
+      "Bash(npx playwright *)",
+      "Bash(jobs -l)",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(node /tmp/screenshot.mjs)",
+      "Bash(pkill -f \"vite --port 5185\")"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }

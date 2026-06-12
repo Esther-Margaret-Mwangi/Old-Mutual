@@ -12,6 +12,7 @@ export default function Layout({
   headerRight,
   searchable = false,
   searchPlaceholder,
+  subHeader,
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -40,6 +41,8 @@ export default function Layout({
         </header>
 
         {searchable && <SearchPanel placeholder={searchPlaceholder} />}
+
+        {subHeader && <div className="layout-subheader">{subHeader}</div>}
 
         <main className="layout-main">{children}</main>
       </div>
