@@ -2,11 +2,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Mail, Phone } from "lucide-react";
 import peopleData from "../data/peopleData";
 import heroBg from "../assets/images/bg1.jpeg";
+import useHeroStatusTone from "../utils/useHeroStatusTone";
 import "../styles/Profile.css";
 
 export default function Profile() {
   const { id } = useParams();
   const navigate = useNavigate();
+  useHeroStatusTone(heroBg);
   const person = peopleData.find((p) => String(p.id) === id);
 
   if (!person) {
