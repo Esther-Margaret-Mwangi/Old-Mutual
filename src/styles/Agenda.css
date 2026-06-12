@@ -33,6 +33,7 @@
 .agenda-dates {
   display: flex;
   justify-content: center;
+  gap: 14px;
   padding: 2px 2px 6px;
 }
 
@@ -49,7 +50,7 @@
   align-items: center;
   justify-content: center;
   gap: 1px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .agenda-date-day {

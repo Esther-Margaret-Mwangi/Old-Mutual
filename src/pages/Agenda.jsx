@@ -10,7 +10,7 @@ import Layout from "../components/Layout";
 import SearchButton from "../components/SearchButton";
 import SearchEmpty from "../components/SearchEmpty";
 import { useSearch } from "../context/SearchContext";
-import { agendaSessions, eventDate } from "../data/agendaData";
+import { agendaSessions, eventDates } from "../data/agendaData";
 import { matchesSearch } from "../utils/search";
 import "../styles/Agenda.css";
 
@@ -30,10 +30,14 @@ function formatTimeRange(startTime, endTime) {
 
 export default function Agenda() {
   const [sortEarliest, setSortEarliest] = useState(true);
+  const [selectedDateIso, setSelectedDateIso] = useState(eventDates[0].iso);
   const { query } = useSearch();
 
+  const eventDate =
+    eventDates.find((date) => date.iso === selectedDateIso) ?? eventDates[0];
+
   const sessions = useMemo(() => {
-    const sorted = [...agendaSessions]
+    const sorted = [...(agendaSessions[selectedDateIso] ?? [])]
       .filter((session) =>
         matchesSearch(
           query,
@@ -45,7 +49,7 @@ export default function Agenda() {
       .sort((a, b) => a.startTime.localeCompare(b.startTime));
 
     return sortEarliest ? sorted : sorted.reverse();
-  }, [sortEarliest, query]);
+  }, [sortEarliest, query, selectedDateIso]);
 
   return (
     <Layout
@@ -69,14 +73,20 @@ export default function Agenda() {
       subHeader={
         <div className="agenda-sticky">
           <div className="agenda-dates" aria-label="Event date">
-            <button
-              type="button"
-              className="agenda-date agenda-date--active"
-              aria-pressed="true"
-            >
-              <span className="agenda-date-day">{eventDate.day}</span>
-              <span className="agenda-date-label">{eventDate.weekday}</span>
-            </button>
+            {eventDates.map((date) => (
+              <button
+                key={date.iso}
+                type="button"
+                className={`agenda-date ${
+                  date.iso === selectedDateIso ? "agenda-date--active" : ""
+                }`}
+                aria-pressed={date.iso === selectedDateIso}
+                onClick={() => setSelectedDateIso(date.iso)}
+              >
+                <span className="agenda-date-day">{date.day}</span>
+                <span className="agenda-date-label">{date.weekday}</span>
+              </button>
+            ))}
           </div>
 
           <section className="agenda-summary">
@@ -119,7 +129,7 @@ export default function Agenda() {
                   </li>
                   <li>
                     <User size={14} />
-                    <span>{session.audience}</span>
+                    <span>Facilitator {session.facilitator}</span>
                   </li>
                   <li>
                     <MapPin size={14} />
