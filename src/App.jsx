@@ -16,6 +16,7 @@ import ActivityDetail from "./pages/ActivityDetail";
 import AllPeople from "./pages/AllPeople";
 import AllActivities from "./pages/AllActivities";
 import About from "./pages/About";
+import Profile from "./pages/Profile";
 import "./styles/App.css";
 
 function App() {
@@ -90,6 +91,16 @@ function App() {
             <div className="layout">
               <div className="app-shell app-shell--flush">
                 <AllPeople />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/profile/:id"
+          element={
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <Profile />
               </div>
             </div>
           }

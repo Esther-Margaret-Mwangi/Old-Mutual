@@ -1,0 +1,152 @@
+/* ── Shell ── */
+.profile-shell {
+  min-height: 100%;
+  background: var(--fm-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Hero ── */
+.profile-hero {
+  position: relative;
+  height: clamp(180px, 28vh, 240px);
+  flex-shrink: 0;
+  background-color: var(--fm-black);
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-back-btn {
+  position: absolute;
+  top: calc(var(--fm-safe-top) + 12px);
+  left: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--fm-black);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  transition: transform 0.15s;
+}
+
+.profile-back-btn:hover {
+  transform: scale(1.07);
+}
+
+.profile-avatar {
+  position: absolute;
+  left: 50%;
+  bottom: -54px;
+  transform: translateX(-50%);
+  width: 108px;
+  height: 108px;
+  border-radius: 999px;
+  border: 4px solid var(--fm-white);
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.18);
+  background: var(--fm-gray-100);
+  z-index: 2;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Content ── */
+.profile-content {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 66px var(--fm-page-padding) calc(28px + var(--fm-safe-bottom));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.profile-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.profile-team-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--fm-gray-50);
+  border: 1px solid var(--fm-gray-100);
+  color: var(--fm-gray-700);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.profile-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fm-gray-500);
+  max-width: 440px;
+}
+
+/* ── Contact ── */
+.profile-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.profile-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--fm-gray-100);
+  background: var(--fm-white);
+  color: var(--fm-black);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.05);
+}
+
+.profile-contact-row svg {
+  color: var(--fm-accent);
+  flex-shrink: 0;
+}
+
+/* ── Not found ── */
+.profile-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 100%;
+  color: var(--fm-gray-500);
+}
+
+.profile-not-found button {
+  background: var(--fm-black);
+  color: var(--fm-white);
+  border: 0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}

@@ -4,7 +4,10 @@
       "Bash(npx eslint *)",
       "Bash(npm run *)",
       "Read(//tmp/**)",
-      "Bash(pkill -f \"vite --port 5179\")"
+      "Bash(pkill -f \"vite --port 5179\")",
+      "Bash(curl -s http://localhost:5180/src/pages/Profile.jsx -o /dev/null -w \"Profile.jsx: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:5180/profile/1 -o /dev/null -w \"/profile/1: %{http_code}\\\\n\")",
+      "Bash(pkill -f \"vite --port 5180\")"
     ]
   }
 }

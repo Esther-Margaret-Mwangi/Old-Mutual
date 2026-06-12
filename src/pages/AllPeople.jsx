@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import FlushHeader from "../components/FlushHeader";
 import SearchButton from "../components/SearchButton";
 import SearchEmpty from "../components/SearchEmpty";
@@ -32,10 +33,14 @@ export default function AllPeople() {
         <section className="all-people-list">
           {people.length === 0 && <SearchEmpty />}
           {people.map((person) => (
-            <article key={person.id} className="all-people-item">
+            <Link
+              key={person.id}
+              to={`/profile/${person.id}`}
+              className="all-people-item"
+            >
               <img src={person.image} alt={person.name} />
               <h2>{person.name}</h2>
-            </article>
+            </Link>
           ))}
         </section>
       </div>

@@ -41,12 +41,16 @@ export default function Home() {
 
         <div className="facilitator-list">
           {peopleData.slice(0, 3).map((person) => (
-            <article key={person.id} className="facilitator-item">
+            <Link
+              key={person.id}
+              to={`/profile/${person.id}`}
+              className="facilitator-item"
+            >
               <img src={person.image} alt={person.name} />
               <div>
                 <h4>{person.name}</h4>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
