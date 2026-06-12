@@ -26,9 +26,9 @@ export default function Home() {
       <section className="home-section">
         <div className="home-section-heading">
           <h3 className="home-section-title">Speakers</h3>
-          <Link to="/all-people" className="home-section-link">
+          {/*<Link to="/all-people" className="home-section-link">
             See more
-          </Link>
+          </Link>*/}
         </div>
 
         <div className="facilitator-list">

@@ -1,0 +1,194 @@
+.info-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Emergency card ── */
+.info-emergency-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.info-emergency-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-emergency-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fecaca;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-emergency-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.info-emergency-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #dc2626;
+}
+
+.info-emergency-cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border: 0;
+  border-radius: 14px;
+  background: #dc2626;
+  color: var(--fm-white);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ── Section headings ── */
+.info-section-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fm-accent);
+}
+
+.info-intro-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--fm-black);
+  margin-top: -6px;
+}
+
+/* ── Contact cards ── */
+.info-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.06);
+}
+
+.info-contact-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.info-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--fm-gray-100);
+  color: var(--fm-gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.info-contact-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.info-contact-email {
+  font-size: 12px;
+  color: var(--fm-gray-500);
+  word-break: break-all;
+}
+
+.info-call-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--fm-accent);
+  color: var(--fm-white);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Call action sheet ── */
+.info-call-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+}
+
+.info-call-sheet {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-call-sheet-btn,
+.info-call-sheet-cancel {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.info-call-sheet-btn {
+  background: #0a84ff;
+  color: var(--fm-white);
+}
+
+.info-call-sheet-cancel {
+  background: rgba(120, 120, 128, 0.7);
+  color: var(--fm-white);
+}

@@ -11,6 +11,10 @@ import AccommodationDetail from "./pages/AccommodationDetail";
 import RestaurantDetail from "./pages/RestaurantDetail";
 import EventDetail from "./pages/EventDetail";
 import Placeholder from "./pages/Placeholder";
+import Help from "./pages/Help";
+import Feedback from "./pages/Feedback";
+import FeedbackForm from "./pages/FeedbackForm";
+import InfoCenter from "./pages/InfoCenter";
 import Agenda from "./pages/Agenda";
 import ActivityDetail from "./pages/ActivityDetail";
 import AllPeople from "./pages/AllPeople";
@@ -205,30 +209,19 @@ function App() {
             </Layout>
           }
         />
+        <Route path="/help" element={<Help />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route
-          path="/help"
+          path="/feedback/form"
           element={
-            <Layout pageTitle="Help / FAQs">
-              <Placeholder title="Help / FAQs" />
-            </Layout>
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <FeedbackForm />
+              </div>
+            </div>
           }
         />
-        <Route
-          path="/feedback"
-          element={
-            <Layout pageTitle="Feedback">
-              <Placeholder title="Feedback" />
-            </Layout>
-          }
-        />
-        <Route
-          path="/info-center"
-          element={
-            <Layout pageTitle="Info Center">
-              <Placeholder title="Info Center" />
-            </Layout>
-          }
-        />
+        <Route path="/info-center" element={<InfoCenter />} />
         <Route
           path="/settings"
           element={

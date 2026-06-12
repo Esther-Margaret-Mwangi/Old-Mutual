@@ -1,0 +1,111 @@
+/* ── Feedback intro card ── */
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 20px;
+  padding: 28px 20px;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.06);
+}
+
+.feedback-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--fm-accent-soft);
+  color: var(--fm-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feedback-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.feedback-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--fm-gray-700);
+}
+
+.feedback-checklist {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  margin: 4px 0 6px;
+}
+
+.feedback-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fm-black);
+}
+
+.feedback-checklist svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--fm-accent);
+}
+
+.feedback-cta {
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--fm-accent);
+  color: var(--fm-white);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(38, 157, 14, 0.3);
+}
+
+/* ── Feedback form (Typeform embed) ── */
+.feedback-form-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+.feedback-form-page .flush-header {
+  flex-shrink: 0;
+  padding: calc(var(--fm-safe-top) + 10px) var(--fm-page-padding) 8px;
+}
+
+.feedback-form-page .flush-header-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.feedback-form-page .flush-header-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.feedback-form-page .flush-header h1 {
+  font-size: 15px;
+}
+
+.feedback-form-iframe {
+  flex: 1;
+  width: 100%;
+  border: 0;
+}

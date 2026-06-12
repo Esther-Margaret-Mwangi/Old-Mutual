@@ -1,0 +1,91 @@
+.faq-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Need Help card ── */
+.faq-help-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.06);
+}
+
+.faq-help-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--fm-accent-soft);
+  color: var(--fm-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faq-help-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--fm-black);
+  margin-bottom: 6px;
+}
+
+.faq-help-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fm-gray-500);
+}
+
+/* ── FAQ accordion ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.05);
+  overflow: hidden;
+}
+
+.faq-item-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fm-black);
+  cursor: pointer;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--fm-black);
+  transition: transform 0.2s ease;
+}
+
+.faq-item--open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-item-answer {
+  padding: 0 16px 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fm-gray-500);
+}

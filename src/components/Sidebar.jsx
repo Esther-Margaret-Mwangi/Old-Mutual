@@ -39,7 +39,7 @@ export default function Sidebar({ isOpen, onClose }) {
               alt="Fairmont"
               className="sidebar-brand-logo"
             />
-            <span className="sidebar-brand-name">Fairmont</span>
+            <span className="sidebar-brand-name">Old Mutual</span>
           </div>
           <button
             className="sidebar-close"
