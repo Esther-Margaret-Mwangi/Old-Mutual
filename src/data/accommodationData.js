@@ -46,14 +46,14 @@ const accommodationUnits = {
   rooms: [
     {
       id: "deluxe-queen",
-      name: "Fairmont Deluxe with Queen Bed",
+      name: "Old Mutual Deluxe with Queen Bed",
       bed: "Queen size bed x 1",
       size: "34 m2/365sqft",
       persons: "2 persons",
       extra: "",
       image: roomImage,
       description:
-        "Elegantly designed for 2 adults, this spacious deluxe room features a fireplace, plush bedding, a private bathroom, and serene garden or Mount Kenya views. Enjoy signature Fairmont touches like a tea/coffee station, cozy seating, and ample wardrobe space.",
+        "Elegantly designed for 2 adults, this spacious deluxe room features a fireplace, plush bedding, a private bathroom, and serene garden or Mount Kenya views. Enjoy signature Old Mutual touches like a tea/coffee station, cozy seating, and ample wardrobe space.",
       chips: [
         "UP TO 2 GUESTS",
         "QUEEN BED",
@@ -63,7 +63,7 @@ const accommodationUnits = {
     },
     {
       id: "deluxe-twin",
-      name: "Fairmont Deluxe with Twin Bed",
+      name: "Old Mutual Deluxe with Twin Bed",
       bed: "Single bed x 2",
       size: "34 m2/365sqft",
       persons: "2 persons",
@@ -88,8 +88,8 @@ const accommodationUnits = {
   ],
   suites: [
     {
-      id: "fairmont-suite",
-      name: "Fairmont Suite with King Bed",
+      id: "oldmutual-suite",
+      name: "Old Mutual Suite with King Bed",
       bed: "King size bed x 1",
       size: "52 m2/559sqft",
       persons: "3 persons",

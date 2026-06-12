@@ -7,7 +7,6 @@ import breakfastImage from "../assets/images/breakfast.jpg";
 import poolImage from "../assets/images/pool bar.jpg";
 import roomImage from "../assets/images/room1.jpg";
 import outdoorImage from "../assets/images/outdoor venue.jpg";
-import fairmontImage from "../assets/images/fairmont2.jpg";
 import bungalowsImage from "../assets/images/bungallow1.jpg";
 import golfImage from "../assets/images/golf1.jpg";
 import culinaryImage from "../assets/images/tusks.jpg";
@@ -82,7 +81,7 @@ const activities = [
     category: "golf",
     title: "Golf on the slopes",
     description:
-      "At Fairmont Mount Kenya Safari Club, immerse yourself in a unique golfing experience. Our meticulously manicured 9-hole, par-3 course offers breathtaking views of Mount Kenya. Whether you're a seasoned golfer or a beginner, our course provides a tranquil oasis for a rejuvenating round of golf.",
+      "At Old Mutual Mount Kenya Safari Club, immerse yourself in a unique golfing experience. Our meticulously manicured 9-hole, par-3 course offers breathtaking views of Mount Kenya. Whether you're a seasoned golfer or a beginner, our course provides a tranquil oasis for a rejuvenating round of golf.",
     hero: golfImage,
     gallery: [golfImage],
   },
@@ -92,7 +91,7 @@ const activities = [
     category: "experiences",
     title: "Culinary Experiences",
     description:
-      "Enjoy floating deck dinners, fire-lit feasts, and bongo breakfasts Fairmont Mount Kenya’s iconic in-house culinary experiences await.",
+      "Enjoy floating deck dinners, fire-lit feasts, and bongo breakfasts Old Mutual Mount Kenya’s iconic in-house culinary experiences await.",
     hero: culinaryImage,
     gallery: [culinaryImage],
   },
@@ -112,7 +111,7 @@ const activities = [
     category: "experiences",
     title: "Kids Experiences",
     description:
-      "Kids can enjoy archery, cooking, crafts, and garden adventures designed for fun, creativity, and nature at Fairmont Mount Kenya Safari Club.",
+      "Kids can enjoy archery, cooking, crafts, and garden adventures designed for fun, creativity, and nature at Old Mutual Mount Kenya Safari Club.",
     hero: kidsImage,
     gallery: [kidsImage],
   },
@@ -121,7 +120,7 @@ const activities = [
     category: "experiences",
     title: "Wellness Experiences",
     description:
-      "Forest-view spa rituals, pergola yoga, and a heated pool Fairmont Mount Kenya offers elevated wellness experiences surrounded by nature.",
+      "Forest-view spa rituals, pergola yoga, and a heated pool Old Mutual Mount Kenya offers elevated wellness experiences surrounded by nature.",
     hero: wellnessImage,
     gallery: [wellnessImage],
   },

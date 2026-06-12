@@ -36,7 +36,7 @@ export default function Layout({
           </div>
 
           <div className="topbar-logo">
-            {headerRight ?? <img src={logoImage} alt="Fairmont logo" />}
+            {headerRight ?? <img src={logoImage} alt="Old Mutual logo" />}
           </div>
         </header>
 

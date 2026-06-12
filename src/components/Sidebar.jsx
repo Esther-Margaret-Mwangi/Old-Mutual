@@ -36,7 +36,7 @@ export default function Sidebar({ isOpen, onClose }) {
           <div className="sidebar-brand">
             <img
               src={logoImage}
-              alt="Fairmont"
+              alt="Old Mutual"
               className="sidebar-brand-logo"
             />
             <span className="sidebar-brand-name">Old Mutual</span>

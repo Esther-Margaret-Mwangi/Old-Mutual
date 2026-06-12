@@ -14,11 +14,11 @@ const eventsData = [
     id: "meetings-conferences",
     title: "Meetings & Conferences",
     cardDescription:
-      "Fairmont Mount Kenya Safari Club offers room for Meetings & Event venues, including executive boardrooms and modern conference spaces.",
+      "Old Mutual Mount Kenya Safari Club offers room for Meetings & Event venues, including executive boardrooms and modern conference spaces.",
     heroLabel: "Meetings & Conferences",
     heading: "MEMORABLE MEETS",
     description:
-      "At Fairmont Mount Kenya Safari Club, we offer the perfect setting for every occasion, from intimate board meetings to large conferences. Our elegant venues, including executive boardrooms and versatile conferencing rooms, provide an atmosphere of sophistication, ensuring every event is a success.",
+      "At Old Mutual Mount Kenya Safari Club, we offer the perfect setting for every occasion, from intimate board meetings to large conferences. Our elegant venues, including executive boardrooms and versatile conferencing rooms, provide an atmosphere of sophistication, ensuring every event is a success.",
     highlights: [
       "4 venues",
       "Free packing space",
@@ -26,7 +26,7 @@ const eventsData = [
     ],
     exploreTitle: "Explore Our Event Venues",
     exploreDescription:
-      "Fairmont Mount Kenya Safari Club offers room for Meetings & Event venues, including executive boardrooms, Kirinyaga conference rooms, and Kirinyaga Ballroom, equipped with modern amenities, for meetings and events.",
+      "Old Mutual Mount Kenya Safari Club offers room for Meetings & Event venues, including executive boardrooms, Kirinyaga conference rooms, and Kirinyaga Ballroom, equipped with modern amenities, for meetings and events.",
     venueCards: [
       {
         name: "KIRINYAGA BALLROOM",
@@ -58,11 +58,11 @@ const eventsData = [
     id: "weddings",
     title: "Weddings",
     cardDescription:
-      "Fairmont Mount Kenya Safari Club offers an array of indoor and outdoor ceremony spaces. Each unique setup creates unforgettable memories.",
+      "Old Mutual Mount Kenya Safari Club offers an array of indoor and outdoor ceremony spaces. Each unique setup creates unforgettable memories.",
     heroLabel: "Weddings",
     heading: "Your Dream Wedding, Perfectly Crafted",
     description:
-      "Fairmont Mount Kenya Safari Club offers a magical wedding experience at the foot of Mount Kenya. Our historic property combines colonial charm with modern luxury. Choose from versatile venues with stunning views, from intimate gardens to elegant ballrooms. With exceptional service and attention to detail, your special day is sure to be unforgettable.",
+      "Old Mutual Mount Kenya Safari Club offers a magical wedding experience at the foot of Mount Kenya. Our historic property combines colonial charm with modern luxury. Choose from versatile venues with stunning views, from intimate gardens to elegant ballrooms. With exceptional service and attention to detail, your special day is sure to be unforgettable.",
     highlights: ["4 venues", "Versatile venues", "Capacity for 500"],
     exploreTitle: "",
     exploreDescription: "",
@@ -87,11 +87,11 @@ const eventsData = [
     id: "social-events",
     title: "Social Events & Celebrations",
     cardDescription:
-      "At Fairmont, we offer outdoor spaces for up to 500 guests and an elegant ballroom for up to 240 guests.",
+      "At Old Mutual, we offer outdoor spaces for up to 500 guests and an elegant ballroom for up to 240 guests.",
     heroLabel: "Social Events",
     heading: "Memorable Moments",
     description:
-      "At Fairmont Mount Kenya Safari Club, every social event is a celebration surrounded by nature’s beauty. With stunning views of Mount Kenya, versatile venues, and impeccable service, we create unforgettable moments. Whether intimate gatherings or grand affairs, we ensure every detail shines.",
+      "At Old Mutual Mount Kenya Safari Club, every social event is a celebration surrounded by nature’s beauty. With stunning views of Mount Kenya, versatile venues, and impeccable service, we create unforgettable moments. Whether intimate gatherings or grand affairs, we ensure every detail shines.",
     highlights: ["5 venues", "Free parking", "Capacity upto 500 guests"],
     exploreTitle: "",
     exploreDescription: "",
