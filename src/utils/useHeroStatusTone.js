@@ -70,10 +70,13 @@ export default function useHeroStatusTone(imageSrc) {
       return;
     }
 
-    themeMeta.setAttribute(
-      "content",
-      tone === "dark" ? "rgba(255,255,255,0.01)" : "rgba(0,0,0,0.01)",
-    );
+    themeMeta.setAttribute("content", tone === "dark" ? "#ffffff" : "#000000");
+
+    return () => {
+      // Restore the default light status bar so non-flush pages (white
+      // topbar) keep matching once we navigate away from this hero.
+      themeMeta.setAttribute("content", "#ffffff");
+    };
   }, [tone]);
 
   return tone;
