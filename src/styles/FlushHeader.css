@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 18px var(--fm-page-padding) 28px;
+  padding: calc(var(--fm-safe-top) + 18px) var(--fm-page-padding) 28px;
   background: var(--fm-white);
 }
 
