@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const LUMINANCE_THRESHOLD = 145;
 
-function getTopStripLuminance(image) {
+function getTopStripColor(image) {
   const canvas = document.createElement("canvas");
   const width = 48;
   const height = 24;
@@ -12,33 +12,47 @@ function getTopStripLuminance(image) {
 
   const context = canvas.getContext("2d", { willReadFrequently: true });
   if (!context) {
-    return 0;
+    return null;
   }
 
   context.drawImage(image, 0, 0, width, height);
 
   const pixels = context.getImageData(0, 0, width, height).data;
-  let total = 0;
+  let r = 0;
+  let g = 0;
+  let b = 0;
   let count = 0;
 
   for (let i = 0; i < pixels.length; i += 4) {
-    const r = pixels[i];
-    const g = pixels[i + 1];
-    const b = pixels[i + 2];
-
-    total += 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    r += pixels[i];
+    g += pixels[i + 1];
+    b += pixels[i + 2];
     count += 1;
   }
 
-  return count ? total / count : 0;
+  if (!count) {
+    return null;
+  }
+
+  r = Math.round(r / count);
+  g = Math.round(g / count);
+  b = Math.round(b / count);
+
+  return { r, g, b, luminance: 0.2126 * r + 0.7152 * g + 0.0722 * b };
+}
+
+function toHex(value) {
+  return value.toString(16).padStart(2, "0");
 }
 
 export default function useHeroStatusTone(imageSrc) {
   const [tone, setTone] = useState("light");
+  const [color, setColor] = useState(null);
 
   useEffect(() => {
     if (!imageSrc) {
       setTone("light");
+      setColor(null);
       return;
     }
 
@@ -48,11 +62,19 @@ export default function useHeroStatusTone(imageSrc) {
 
     const setToneFromImage = () => {
       try {
-        const luminance = getTopStripLuminance(image);
-        setTone(luminance > LUMINANCE_THRESHOLD ? "dark" : "light");
+        const sample = getTopStripColor(image);
+        if (!sample) {
+          setTone("light");
+          setColor(null);
+          return;
+        }
+
+        setTone(sample.luminance > LUMINANCE_THRESHOLD ? "dark" : "light");
+        setColor(`#${toHex(sample.r)}${toHex(sample.g)}${toHex(sample.b)}`);
       } catch {
         // Cross-origin or canvas-security failures should not block rendering.
         setTone("light");
+        setColor(null);
       }
     };
 
@@ -70,14 +92,19 @@ export default function useHeroStatusTone(imageSrc) {
       return;
     }
 
-    themeMeta.setAttribute("content", tone === "dark" ? "#ffffff" : "#000000");
+    // Match the status bar to the hero's own top-edge color so it reads as
+    // a seamless extension of the photo instead of a separate solid bar.
+    themeMeta.setAttribute(
+      "content",
+      color ?? (tone === "dark" ? "#ffffff" : "#000000")
+    );
 
     return () => {
       // Restore the default light status bar so non-flush pages (white
       // topbar) keep matching once we navigate away from this hero.
       themeMeta.setAttribute("content", "#ffffff");
     };
-  }, [tone]);
+  }, [tone, color]);
 
   return tone;
 }

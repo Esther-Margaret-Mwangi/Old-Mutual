@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: min(82%, 310px);
+  width: min(75%, 260px);
   background: var(--fm-white);
   box-shadow: 10px 0 30px rgba(17, 17, 17, 0.22);
   z-index: 100;
@@ -89,12 +89,12 @@
 .sidebar-link {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 13px 14px;
+  gap: 12px;
+  padding: 11px 12px;
   border-radius: 10px;
   text-decoration: none;
   color: var(--fm-black);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   transition:
     background 0.2s,

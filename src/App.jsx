@@ -22,6 +22,8 @@ import AllPeople from "./pages/AllPeople";
 import AllActivities from "./pages/AllActivities";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
+import EventPhotos from "./pages/EventPhotos";
+import EmergencyPoints from "./pages/EmergencyPoints";
 import "./styles/App.css";
 
 function App() {
@@ -216,7 +218,7 @@ function App() {
           path="/event-photos"
           element={
             <Layout pageTitle="Event Photos">
-              <Placeholder title="Event Photos" />
+              <EventPhotos />
             </Layout>
           }
         />
@@ -241,14 +243,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/emergency-points"
-          element={
-            <Layout pageTitle="Emergency Points">
-              <Placeholder title="Emergency Points" />
-            </Layout>
-          }
-        />
+        <Route path="/emergency-points" element={<EmergencyPoints />} />
       </Routes>
       </SearchProvider>
     </BrowserRouter>

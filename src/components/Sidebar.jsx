@@ -65,7 +65,7 @@ export default function Sidebar({ isOpen, onClose }) {
               }
               onClick={onClose}
             >
-              <Icon size={20} className="sidebar-link-icon" />
+              <Icon size={18} className="sidebar-link-icon" />
               <span>{label}</span>
             </NavLink>
           ))}

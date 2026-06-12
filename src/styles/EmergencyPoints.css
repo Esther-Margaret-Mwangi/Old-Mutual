@@ -1,0 +1,75 @@
+.emp-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.emp-section-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #dc2626;
+  margin-top: 4px;
+}
+
+.emp-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--fm-black);
+  margin-top: -6px;
+}
+
+.emp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.06);
+}
+
+.emp-card-title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fm-black);
+}
+
+.emp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.emp-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fecaca;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emp-card-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.emp-card-image {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.emp-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
