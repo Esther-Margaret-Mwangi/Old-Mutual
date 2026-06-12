@@ -9,8 +9,10 @@ import {
   AlertTriangle,
   X,
 } from "lucide-react";
-import logoImage from "../assets/images/flogo1.jpeg";
 import "../styles/Sidebar.css";
+
+const logoImage =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70rQbh9JzKxY_tkMl1D3Yk8sfTzOMVPNf5O3fIOIH9UP9YQD1x5IOeBI&s=10";
 
 const navItems = [
   { label: "Home", path: "/", icon: Home },

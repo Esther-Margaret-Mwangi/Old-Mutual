@@ -16,6 +16,7 @@ import Feedback from "./pages/Feedback";
 import FeedbackForm from "./pages/FeedbackForm";
 import InfoCenter from "./pages/InfoCenter";
 import Agenda from "./pages/Agenda";
+import AgendaDetail from "./pages/AgendaDetail";
 import ActivityDetail from "./pages/ActivityDetail";
 import AllPeople from "./pages/AllPeople";
 import AllActivities from "./pages/AllActivities";
@@ -95,6 +96,16 @@ function App() {
             <div className="layout">
               <div className="app-shell app-shell--flush">
                 <AllPeople />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/agenda/:sessionId"
+          element={
+            <div className="layout">
+              <div className="app-shell app-shell--flush">
+                <AgendaDetail />
               </div>
             </div>
           }

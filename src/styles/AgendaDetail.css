@@ -1,0 +1,187 @@
+.agd-shell {
+  min-height: 100%;
+  background: var(--fm-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Hero ── */
+.agd-hero {
+  position: relative;
+  height: clamp(240px, 36vh, 320px);
+  flex-shrink: 0;
+  background-color: var(--fm-black);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agd-back-btn {
+  position: absolute;
+  top: calc(var(--fm-safe-top) + 12px);
+  left: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--fm-black);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.agd-hero-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--fm-white);
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(17, 17, 17, 0.25);
+}
+
+/* ── Floating summary card ── */
+.agd-card {
+  position: relative;
+  margin: -44px var(--fm-page-padding) 0;
+  background: var(--fm-white);
+  border-radius: 22px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.12);
+  z-index: 2;
+}
+
+.agd-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.agd-card-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--fm-black);
+  line-height: 1.25;
+}
+
+.agd-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.agd-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--fm-gray-500);
+}
+
+.agd-meta-row svg {
+  flex-shrink: 0;
+  color: var(--fm-gray-300);
+}
+
+/* ── Content ── */
+.agd-content {
+  flex: 1;
+  padding: 28px var(--fm-page-padding) calc(32px + var(--fm-safe-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.agd-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--fm-gray-500);
+  margin-bottom: 10px;
+}
+
+.agd-desc p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--fm-black);
+}
+
+.agd-desc p + p {
+  margin-top: 8px;
+}
+
+/* ── Speakers ── */
+.agd-speaker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.agd-speaker-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.agd-speaker-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--fm-accent-soft);
+  color: var(--fm-accent);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.agd-speaker-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.agd-speaker-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fm-black);
+}
+
+.agd-speaker-role {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--fm-gray-500);
+}
+
+/* ── Not found ── */
+.agd-not-found {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--fm-gray-500);
+}
+
+.agd-not-found button {
+  background: var(--fm-black);
+  color: var(--fm-white);
+  border: 0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}

@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import SearchPanel from "./SearchPanel";
 import Sidebar from "./Sidebar";
-import logoImage from "../assets/images/flogo1.jpeg";
 import "../styles/Layout.css";
+
+const logoImage =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70rQbh9JzKxY_tkMl1D3Yk8sfTzOMVPNf5O3fIOIH9UP9YQD1x5IOeBI&s=10";
 
 export default function Layout({
   children,

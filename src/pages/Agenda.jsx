@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowUpDown,
   Calendar,
@@ -12,21 +13,8 @@ import SearchEmpty from "../components/SearchEmpty";
 import { useSearch } from "../context/SearchContext";
 import { agendaSessions, eventDates } from "../data/agendaData";
 import { matchesSearch } from "../utils/search";
+import { formatTime, formatTimeRange } from "../utils/datetime";
 import "../styles/Agenda.css";
-
-function formatTime(time24) {
-  const [hours, minutes] = time24.split(":").map(Number);
-  const period = hours >= 12 ? "PM" : "AM";
-  const hour12 = hours % 12 || 12;
-  return `${hour12}:${String(minutes).padStart(2, "0")} ${period}`;
-}
-
-function formatTimeRange(startTime, endTime) {
-  if (!endTime) {
-    return formatTime(startTime);
-  }
-  return `${formatTime(startTime)} - ${formatTime(endTime)}`;
-}
 
 export default function Agenda() {
   const [sortEarliest, setSortEarliest] = useState(true);
@@ -109,7 +97,11 @@ export default function Agenda() {
       <div className="agenda-list">
         {sessions.length === 0 && <SearchEmpty />}
         {sessions.map((session) => (
-          <article key={session.id} className="agenda-item">
+          <Link
+            key={session.id}
+            to={`/agenda/${session.id}`}
+            className="agenda-item"
+          >
             <time className="agenda-item-time" dateTime={session.startTime}>
               {formatTime(session.startTime)}
             </time>
@@ -138,7 +130,7 @@ export default function Agenda() {
                 </ul>
               </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </Layout>

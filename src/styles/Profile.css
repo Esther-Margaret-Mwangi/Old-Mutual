@@ -1,6 +1,7 @@
 /* ── Shell ── */
 .profile-shell {
-  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
   background: var(--fm-white);
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@
   background-color: var(--fm-black);
   background-size: cover;
   background-position: center;
+  border-radius: 0 0 35px 35px;
 }
 
 .profile-back-btn {
@@ -61,13 +63,30 @@
   display: block;
 }
 
-/* ── Content ── */
-.profile-content {
-  flex: 1;
+/* ── Fixed header content (name + role) ── */
+.profile-fixed {
+  flex-shrink: 0;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 66px var(--fm-page-padding) calc(28px + var(--fm-safe-bottom));
+  padding: 66px var(--fm-page-padding) 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+/* ── Scrollable content (bio + sessions) ── */
+.profile-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--fm-page-padding) calc(28px + var(--fm-safe-bottom));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,11 +116,89 @@
   line-height: 1.4;
 }
 
-.profile-desc {
+/* ── Sections (Bio / Sessions) ── */
+.profile-section {
+  width: 100%;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.profile-bio {
   font-size: 13px;
   line-height: 1.6;
+  color: var(--fm-gray-700);
+}
+
+.profile-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fm-accent);
+  margin-bottom: 10px;
+}
+
+.profile-empty {
+  font-size: 13px;
   color: var(--fm-gray-500);
-  max-width: 440px;
+}
+
+/* ── Session list ── */
+.profile-session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-session-card {
+  display: flex;
+  align-items: stretch;
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.06);
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile-session-stripe {
+  width: 5px;
+  flex-shrink: 0;
+  background: var(--fm-accent);
+}
+
+.profile-session-body {
+  flex: 1;
+  padding: 14px;
+}
+
+.profile-session-body h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--fm-black);
+  margin-bottom: 10px;
+}
+
+.profile-session-meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-session-meta li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--fm-gray-500);
+  line-height: 1.35;
+}
+
+.profile-session-meta svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--fm-gray-300);
 }
 
 /* ── Contact ── */
