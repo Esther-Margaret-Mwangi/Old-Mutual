@@ -42,7 +42,7 @@
   height: 42px;
   border-radius: 999px;
   border: 0;
-  background: var(--fm-black);
+  background: var(--fm-accent);
   color: var(--fm-white);
   display: grid;
   place-items: center;

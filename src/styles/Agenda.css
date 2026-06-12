@@ -70,7 +70,7 @@
   border-color: var(--fm-accent);
   background: var(--fm-accent-soft);
   color: var(--fm-accent);
-  box-shadow: 0 4px 12px rgba(37, 95, 122, 0.18);
+  box-shadow: 0 4px 12px rgba(38, 157, 14, 0.18);
 }
 
 .agenda-date--active .agenda-date-day {

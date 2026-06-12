@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import {
   Home,
   Calendar,
-  UtensilsCrossed,
-  PartyPopper,
-  BedDouble,
+  Camera,
+  HelpCircle,
+  MessageSquare,
   Info,
+  AlertTriangle,
   X,
 } from "lucide-react";
 import logoImage from "../assets/images/flogo1.jpeg";
@@ -14,10 +15,16 @@ import "../styles/Sidebar.css";
 const navItems = [
   { label: "Home", path: "/", icon: Home },
   { label: "Agenda", path: "/agenda", icon: Calendar },
-  { label: "Dine", path: "/dine", icon: UtensilsCrossed },
-  { label: "Events", path: "/events", icon: PartyPopper },
-  { label: "Accommodation", path: "/accommodation", icon: BedDouble },
-  { label: "About App", path: "/about", icon: Info },
+  { label: "Event Photos", path: "/event-photos", icon: Camera },
+  { label: "Help / FAQs", path: "/help", icon: HelpCircle },
+  { label: "Feedback", path: "/feedback", icon: MessageSquare },
+  { label: "Info Center", path: "/info-center", icon: Info },
+  {
+    label: "Emergency Points",
+    path: "/emergency-points",
+    icon: AlertTriangle,
+    danger: true,
+  },
 ];
 
 export default function Sidebar({ isOpen, onClose }) {
@@ -29,9 +36,10 @@ export default function Sidebar({ isOpen, onClose }) {
           <div className="sidebar-brand">
             <img
               src={logoImage}
-              alt="Fairmont logo"
+              alt="Fairmont"
               className="sidebar-brand-logo"
             />
+            <span className="sidebar-brand-name">Fairmont</span>
           </div>
           <button
             className="sidebar-close"
@@ -43,13 +51,15 @@ export default function Sidebar({ isOpen, onClose }) {
         </div>
 
         <nav className="sidebar-nav">
-          {navItems.map(({ label, path, icon: Icon }) => (
+          {navItems.map(({ label, path, icon: Icon, danger }) => (
             <NavLink
               key={label}
               to={path}
               end={path === "/"}
               className={({ isActive }) =>
-                `sidebar-link ${isActive ? "sidebar-link--active" : ""}`
+                `sidebar-link ${danger ? "sidebar-link--danger" : ""} ${
+                  isActive ? "sidebar-link--active" : ""
+                }`
               }
               onClick={onClose}
             >

@@ -163,6 +163,88 @@ function App() {
             </Layout>
           }
         />
+
+        {/* New sidebar sections — coming soon */}
+        <Route
+          path="/gallery"
+          element={
+            <Layout pageTitle="Gallery">
+              <Placeholder title="Gallery" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/networking"
+          element={
+            <Layout pageTitle="Networking">
+              <Placeholder title="Networking" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/chats"
+          element={
+            <Layout pageTitle="Chats">
+              <Placeholder title="Chats" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/notifications"
+          element={
+            <Layout pageTitle="Notifications">
+              <Placeholder title="Notifications" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/event-photos"
+          element={
+            <Layout pageTitle="Event Photos">
+              <Placeholder title="Event Photos" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/help"
+          element={
+            <Layout pageTitle="Help / FAQs">
+              <Placeholder title="Help / FAQs" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/feedback"
+          element={
+            <Layout pageTitle="Feedback">
+              <Placeholder title="Feedback" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/info-center"
+          element={
+            <Layout pageTitle="Info Center">
+              <Placeholder title="Info Center" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Layout pageTitle="Settings">
+              <Placeholder title="Settings" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/emergency-points"
+          element={
+            <Layout pageTitle="Emergency Points">
+              <Placeholder title="Emergency Points" />
+            </Layout>
+          }
+        />
       </Routes>
       </SearchProvider>
     </BrowserRouter>
