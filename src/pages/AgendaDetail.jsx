@@ -78,7 +78,7 @@ export default function AgendaDetail() {
               {session.description ||
                 "Details for this session will be shared closer to the event."}
             </p>
-            <p>Led by: {session.audience === "everyone" ? "All" : session.audience}</p>
+            {session.leadBy && <p>Led by: {session.leadBy}</p>}
           </div>
         </section>
 
@@ -88,10 +88,11 @@ export default function AgendaDetail() {
           <div className="agd-speaker-list">
             {speakers.length === 0 ? (
               <div className="agd-speaker-item">
-                <div className="agd-speaker-avatar">S</div>
+                <div className="agd-speaker-avatar">F</div>
                 <div>
-                  <p className="agd-speaker-name">Speaker To Be Announced</p>
-                  <p className="agd-speaker-role">Session speaker</p>
+                  <p className="agd-speaker-name">
+                    Facilitator {session.facilitator}
+                  </p>
                 </div>
               </div>
             ) : (

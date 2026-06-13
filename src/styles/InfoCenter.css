@@ -35,13 +35,13 @@
 
 .info-emergency-title {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #dc2626;
 }
 
 .info-emergency-text {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   color: #dc2626;
 }
@@ -58,7 +58,7 @@
   background: #dc2626;
   color: var(--fm-white);
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
@@ -67,13 +67,13 @@
 /* ── Section headings ── */
 .info-section-title {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--fm-accent);
 }
 
 .info-intro-text {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--fm-black);
   margin-top: -6px;
@@ -92,7 +92,7 @@
 }
 
 .info-contact-card-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--fm-black);
 }
@@ -124,13 +124,13 @@
 }
 
 .info-contact-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--fm-black);
 }
 
 .info-contact-email {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--fm-gray-500);
   word-break: break-all;
 }
@@ -138,13 +138,13 @@
 .info-call-btn {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
+  gap: 4px;
+  padding: 8px 14px;
   border: 0;
   border-radius: 999px;
   background: var(--fm-accent);
   color: var(--fm-white);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   flex-shrink: 0;

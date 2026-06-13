@@ -6,21 +6,60 @@
   justify-content: flex-end;
 }
 
+.agenda-sort {
+  position: relative;
+}
+
 .agenda-sort-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  width: 40px;
   height: 40px;
-  padding: 0 12px;
   border-radius: 999px;
   border: 1px solid var(--fm-gray-100);
   background: var(--fm-white);
   color: var(--fm-accent);
-  font-size: 12px;
-  font-weight: 700;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(17, 17, 17, 0.08);
-  white-space: nowrap;
+}
+
+.agenda-sort-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 10;
+  min-width: 160px;
+  list-style: none;
+  background: var(--fm-white);
+  border: 1px solid var(--fm-gray-100);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.12);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.agenda-sort-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--fm-black);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.agenda-sort-option--active {
+  color: var(--fm-accent);
+  background: var(--fm-accent-soft);
 }
 
 .agenda-sticky {
@@ -132,8 +171,8 @@
 
 .agenda-item {
   display: grid;
-  grid-template-columns: 62px 1fr;
-  gap: 10px;
+  grid-template-columns: 50px 1fr;
+  gap: 6px;
   align-items: start;
   text-decoration: none;
   color: inherit;

@@ -10,7 +10,7 @@ const EMERGENCY_DISPLAY = "+254 711 032 000";
 const MEETING_POINT_IMAGE =
   "https://res.cloudinary.com/dbo1334a9/image/upload/v1781256525/Event_Application_Headers_15_jf4cif.png";
 const HEMINGWAYS_IMAGE =
-  "https://res.cloudinary.com/dbo1334a9/image/upload/v1781256525/Event_Application_Headers_15_jf4cif.png";
+  "https://www.kayak.ae/rimg/himg/b8/ef/7e/leonardo-681187-3164400-560144.jpg?width=836&height=607&crop=true";
 
 export default function EmergencyPoints() {
   const [activeCall, setActiveCall] = useState(null);

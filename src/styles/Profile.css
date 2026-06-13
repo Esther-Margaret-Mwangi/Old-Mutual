@@ -10,7 +10,7 @@
 /* ── Hero ── */
 .profile-hero {
   position: relative;
-  height: clamp(140px, 22vh, 190px);
+  height: clamp(120px, 18vh, 160px);
   flex-shrink: 0;
   background-color: var(--fm-black);
   background-size: cover;

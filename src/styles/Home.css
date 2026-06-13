@@ -57,7 +57,7 @@
 }
 
 .home-hero-copy h2 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.24;
   font-weight: 700;
   color: var(--fm-white);
@@ -67,7 +67,7 @@
 
 .home-hero-copy p {
   color: rgba(255, 255, 255, 0.94);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.4;
   text-shadow: 0 2px 8px rgba(17, 17, 17, 0.35);
   overflow: hidden;
@@ -137,13 +137,13 @@
 .facilitator-item h4 {
   font-size: 15px;
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--fm-black);
   margin-bottom: 2px;
 }
 
 .facilitator-item p {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.35;
   color: var(--fm-gray-500);
 }

@@ -33,9 +33,10 @@ export const agendaSessions = {
       title: "Preliminaries",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Secretariat",
       location: LOCATION,
       description:
-        "Arrival of chairpersons and management. Settling into the room. Led by: Secretariat",
+        "Arrival of chairpersons and management. Settling into the room.",
     },
     {
       id: "call-to-order-day0",
@@ -44,8 +45,9 @@ export const agendaSessions = {
       title: "Call to order",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "MC",
       location: LOCATION,
-      description: "Welcome and introductions. Led by: MC",
+      description: "Welcome and introductions.",
     },
     {
       id: "opening-remarks-day0",
@@ -54,6 +56,7 @@ export const agendaSessions = {
       title: "Opening remarks",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Habil Olaka",
       location: LOCATION,
       description: "Group Chairman's opening remarks.",
     },
@@ -64,9 +67,9 @@ export const agendaSessions = {
       title: "Strategy overview",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Arthur Oginga",
       location: LOCATION,
-      description:
-        "Road to 2030: Strategy Update and Financial Performance.",
+      description: "Road to 2030: Strategy Update and Financial Performance.",
     },
     {
       id: "comfort-break-group-photo",
@@ -85,6 +88,7 @@ export const agendaSessions = {
       title: "Board Talk: Leading through Transformation",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Martin Oduor",
       location: LOCATION,
       description:
         "Governance leadership in navigating and sustaining innovation and technology disruption.",
@@ -96,6 +100,7 @@ export const agendaSessions = {
       title: "Closed Session",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Habil Olaka",
       location: LOCATION,
       description:
         "Board chairpersons key concerns, alignment opportunities and driving strategic levers.",
@@ -119,7 +124,9 @@ export const agendaSessions = {
       title: "Open Session",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "All",
       location: LOCATION,
+      description: "Preliminaries.",
     },
     {
       id: "welcome-opening-remarks",
@@ -128,7 +135,9 @@ export const agendaSessions = {
       title: "Welcome and opening remarks",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Habil Olaka",
       location: LOCATION,
+      description: "Plenary welcome and opening remarks.",
     },
     {
       id: "leading-through-transformation",
@@ -137,7 +146,9 @@ export const agendaSessions = {
       title: "Leading through Transformation",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Ken Njoroge",
       location: LOCATION,
+      description: "Keynote speaker session.",
     },
     {
       id: "comfort-break-day1",
@@ -147,6 +158,7 @@ export const agendaSessions = {
       facilitator: "TBA",
       audience: "everyone",
       location: LOCATION,
+      description: "Comfort break.",
     },
     {
       id: "6x-strategy-delivery-update",
@@ -155,7 +167,9 @@ export const agendaSessions = {
       title: "6x Strategy delivery update",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Arthur Oginga",
       location: LOCATION,
+      description: "Presentation and discussion.",
     },
     {
       id: "winning-retail-sme-segment",
@@ -164,7 +178,9 @@ export const agendaSessions = {
       title: "Winning in Retail & SME Segment",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Martin Karenju",
       location: LOCATION,
+      description: "Retail and SME Strategy.",
     },
     {
       id: "lunch-break-day1",
@@ -174,6 +190,7 @@ export const agendaSessions = {
       facilitator: "TBA",
       audience: "everyone",
       location: LOCATION,
+      description: "Lunch break and personal time.",
     },
     {
       id: "new-business-model",
@@ -182,7 +199,9 @@ export const agendaSessions = {
       title: "New Business Model",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Isaac Nzyoka",
       location: LOCATION,
+      description: "Thrive Ecosystem, AI, Digital Channel Commercial Strategy.",
     },
     {
       id: "open-feedback-day1-close",
@@ -191,7 +210,9 @@ export const agendaSessions = {
       title: "Open Feedback & Day 1 Close",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Catherine Adeya",
       location: LOCATION,
+      description: "Plenary feedback and close.",
     },
     {
       id: "appreciation-dinner",
@@ -200,7 +221,9 @@ export const agendaSessions = {
       title: "Appreciation Dinner",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Robert Mbugua",
       location: LOCATION,
+      description: "Appreciation Dinner.",
     },
   ],
   "2026-06-17": [
@@ -211,7 +234,9 @@ export const agendaSessions = {
       title: "Open Session",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "All",
       location: LOCATION,
+      description: "Preliminaries.",
     },
     {
       id: "oil-gas-growth-opportunity",
@@ -220,7 +245,9 @@ export const agendaSessions = {
       title: "Oil & Gas Growth Opportunity",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Edith Jiya",
       location: LOCATION,
+      description: "Oil and Gas strategy.",
     },
     {
       id: "comfort-break-day2",
@@ -230,6 +257,7 @@ export const agendaSessions = {
       facilitator: "TBA",
       audience: "everyone",
       location: LOCATION,
+      description: "Comfort break.",
     },
     {
       id: "cost-optimization",
@@ -238,7 +266,10 @@ export const agendaSessions = {
       title: "Cost Optimization",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Isaiah Gakonyo",
       location: LOCATION,
+      description:
+        "Sharper cost and spend discipline to unlock savings; cost optimization and rebalancing to pivot to growth and strategic reinvestment.",
     },
     {
       id: "cash-generation",
@@ -247,7 +278,9 @@ export const agendaSessions = {
       title: "Cash Generation",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Isaiah Gakonyo",
       location: LOCATION,
+      description: "Cash generation and dividend plan.",
     },
     {
       id: "closing-remarks-day2",
@@ -256,7 +289,9 @@ export const agendaSessions = {
       title: "Closing Remarks",
       facilitator: "TBA",
       audience: "everyone",
+      leadBy: "Dr. Habil Olaka",
       location: LOCATION,
+      description: "Closing remarks.",
     },
     {
       id: "lunch-day2",
@@ -266,6 +301,7 @@ export const agendaSessions = {
       facilitator: "TBA",
       audience: "everyone",
       location: LOCATION,
+      description: "Lunch break.",
     },
   ],
 };

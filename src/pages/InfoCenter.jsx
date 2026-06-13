@@ -81,7 +81,7 @@ export default function InfoCenter() {
                 className="info-call-btn"
                 onClick={() => setActiveCall(contact)}
               >
-                <Phone size={16} />
+                <Phone size={13} />
                 <span>Call</span>
               </button>
             </div>

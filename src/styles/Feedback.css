@@ -26,13 +26,13 @@
 
 .feedback-title {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--fm-black);
 }
 
 .feedback-desc {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--fm-gray-700);
 }
@@ -51,7 +51,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
   color: var(--fm-black);
 }
@@ -64,12 +64,12 @@
 
 .feedback-cta {
   width: 100%;
-  padding: 16px;
+  padding: 11px;
   border: 0;
   border-radius: 16px;
   background: var(--fm-accent);
   color: var(--fm-white);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;

@@ -13,7 +13,7 @@ const peopleData = [
     image:
       "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174014/Isaac_Nzyoka_i6givd.jpg",
     team: "Kenya Chief Operating Officer",
-    sessionIds: ["new-business-model"],
+    sessionIds: [],
   },
   {
     id: 3,
@@ -24,10 +24,18 @@ const peopleData = [
     sessionIds: ["strategy-overview", "6x-strategy-delivery-update"],
   },
   {
+    id: 9,
+    name: "Robert Mbugua",
+    image:
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781267457/Robert_Mbugua_oyfjee.jpg",
+    team: "Guest Speaker",
+    sessionIds: ["appreciation-dinner"],
+  },
+  {
     id: 4,
     name: "Edith Jiya",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781343374/Edith_Jiya_bhps0r.png",
     team: "Chief Executive Officer Old Mutual Holdings Plc Uganda",
     sessionIds: ["oil-gas-growth-opportunity"],
   },
@@ -64,24 +72,17 @@ const peopleData = [
     id: 8,
     name: "Isaiah Gakonyo",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781343372/Isaiha_Gakonyo_xuc0fc.jpg",
     team: "Ag. Group Chief Financial Officer",
     sessionIds: ["cost-optimization", "cash-generation"],
-  },
-  {
-    id: 9,
-    name: "Robert Mbugua",
-    image:
-      "https://res.cloudinary.com/dbo1334a9/image/upload/v1781267457/Robert_Mbugua_oyfjee.jpg",
-    team: "Old Mutual",
-    sessionIds: ["appreciation-dinner"],
   },
   {
     id: 10,
     name: "Dr. Martin Oduor",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    sessionIds: ["board-talk-leading-through-transformation"],
+    team: "The Leadership Group",
+    sessionIds: [],
   },
 ];
 

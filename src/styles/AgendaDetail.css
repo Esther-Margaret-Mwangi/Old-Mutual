@@ -8,7 +8,7 @@
 /* ── Hero ── */
 .agd-hero {
   position: relative;
-  height: clamp(160px, 24vh, 210px);
+  height: clamp(140px, 20vh, 180px);
   flex-shrink: 0;
   background-color: var(--fm-black);
   background-size: cover;

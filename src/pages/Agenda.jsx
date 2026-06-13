@@ -1,8 +1,9 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpDown,
   Calendar,
+  Check,
   Clock,
   MapPin,
   User,
@@ -26,6 +27,8 @@ function getTodayIso() {
 
 export default function Agenda() {
   const [sortEarliest, setSortEarliest] = useState(true);
+  const [sortMenuOpen, setSortMenuOpen] = useState(false);
+  const sortMenuRef = useRef(null);
   const [selectedDateIso, setSelectedDateIso] = useState(() => {
     const todayIso = getTodayIso();
     return eventDates.some((date) => date.iso === todayIso)
@@ -33,6 +36,19 @@ export default function Agenda() {
       : eventDates[0].iso;
   });
   const { query } = useSearch();
+
+  useEffect(() => {
+    if (!sortMenuOpen) return;
+
+    const handleClickOutside = (event) => {
+      if (!sortMenuRef.current?.contains(event.target)) {
+        setSortMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [sortMenuOpen]);
 
   const eventDate =
     eventDates.find((date) => date.iso === selectedDateIso) ?? eventDates[0];
@@ -61,14 +77,58 @@ export default function Agenda() {
       headerRight={
         <div className="agenda-topbar-actions">
           <SearchButton />
-          <button
-            type="button"
-            className="agenda-sort-btn"
-            onClick={() => setSortEarliest((value) => !value)}
-          >
-            <ArrowUpDown size={14} />
-            <span>{sortEarliest ? "Earliest" : "Latest"}</span>
-          </button>
+          <div className="agenda-sort" ref={sortMenuRef}>
+            <button
+              type="button"
+              className="agenda-sort-btn"
+              onClick={() => setSortMenuOpen((open) => !open)}
+              aria-haspopup="listbox"
+              aria-expanded={sortMenuOpen}
+              aria-label="Sort sessions by time"
+              title="Sort sessions"
+            >
+              <ArrowUpDown size={17} />
+            </button>
+
+            {sortMenuOpen && (
+              <ul className="agenda-sort-menu" role="listbox">
+                <li role="presentation">
+                  <button
+                    type="button"
+                    role="option"
+                    aria-selected={sortEarliest}
+                    className={`agenda-sort-option ${
+                      sortEarliest ? "agenda-sort-option--active" : ""
+                    }`}
+                    onClick={() => {
+                      setSortEarliest(true);
+                      setSortMenuOpen(false);
+                    }}
+                  >
+                    <span>Earliest first</span>
+                    {sortEarliest && <Check size={14} />}
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button
+                    type="button"
+                    role="option"
+                    aria-selected={!sortEarliest}
+                    className={`agenda-sort-option ${
+                      !sortEarliest ? "agenda-sort-option--active" : ""
+                    }`}
+                    onClick={() => {
+                      setSortEarliest(false);
+                      setSortMenuOpen(false);
+                    }}
+                  >
+                    <span>Latest first</span>
+                    {!sortEarliest && <Check size={14} />}
+                  </button>
+                </li>
+              </ul>
+            )}
+          </div>
         </div>
       }
       subHeader={
