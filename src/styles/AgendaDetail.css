@@ -8,7 +8,7 @@
 /* ── Hero ── */
 .agd-hero {
   position: relative;
-  height: clamp(190px, 28vh, 250px);
+  height: clamp(160px, 24vh, 210px);
   flex-shrink: 0;
   background-color: var(--fm-black);
   background-size: cover;
@@ -73,7 +73,7 @@
 
 .agd-card-title {
   font-family: "Fraunces", Georgia, serif;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--fm-black);
   line-height: 1.25;
