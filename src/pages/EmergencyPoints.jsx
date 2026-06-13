@@ -43,21 +43,21 @@ export default function EmergencyPoints() {
             <span>Emergency Call</span>
           </button>
         </section>
-
+        <br />
         <h2 className="emp-section-title">Emergency Maps</h2>
+
         <div className="emp-card">
           <h3 className="emp-card-title">Emergency Meeting Point</h3>
           <div className="emp-card-image">
             <img src={MEETING_POINT_IMAGE} alt="Emergency Meeting Point" />
           </div>
         </div>
-
+        <br />
         <h2 className="emp-section-title">Emergency Points</h2>
         <p className="emp-text">
-          There are currently no designated on-site emergency points listed
-          for this venue. If you need urgent assistance, call the emergency
-          number at the top of this page immediately and notify the event
-          team.
+          There are currently no designated on-site emergency points listed for
+          this venue. If you need urgent assistance, call the emergency number
+          at the top of this page immediately and notify the event team.
         </p>
 
         <div className="emp-card">
@@ -74,10 +74,7 @@ export default function EmergencyPoints() {
       </div>
 
       {activeCall && (
-        <div
-          className="info-call-overlay"
-          onClick={() => setActiveCall(null)}
-        >
+        <div className="info-call-overlay" onClick={() => setActiveCall(null)}>
           <div
             className="info-call-sheet"
             onClick={(event) => event.stopPropagation()}

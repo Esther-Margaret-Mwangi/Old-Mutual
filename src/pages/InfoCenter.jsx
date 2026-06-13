@@ -53,15 +53,16 @@ export default function InfoCenter() {
             <span>Emergency Call</span>
           </button>
         </section>
-
+        <br />
         <h2 className="info-section-title">Information Center</h2>
+
         <p className="info-intro-text">
           Welcome to our Information Center. Here you&apos;ll find all the
           essential contacts and resources to make your event experience
-          seamless. Our dedicated team is ready to assist you with any
-          questions or requests.
+          seamless. Our dedicated team is ready to assist you with any questions
+          or requests.
         </p>
-
+        <br />
         <h2 className="info-section-title">Key Contacts</h2>
 
         {contacts.map((contact) => (
@@ -89,10 +90,7 @@ export default function InfoCenter() {
       </div>
 
       {activeCall && (
-        <div
-          className="info-call-overlay"
-          onClick={() => setActiveCall(null)}
-        >
+        <div className="info-call-overlay" onClick={() => setActiveCall(null)}>
           <div
             className="info-call-sheet"
             onClick={(event) => event.stopPropagation()}
