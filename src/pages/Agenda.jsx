@@ -12,13 +12,26 @@ import SearchButton from "../components/SearchButton";
 import SearchEmpty from "../components/SearchEmpty";
 import { useSearch } from "../context/SearchContext";
 import { agendaSessions, eventDates } from "../data/agendaData";
+import peopleData from "../data/peopleData";
 import { matchesSearch } from "../utils/search";
 import { formatTime, formatTimeRange } from "../utils/datetime";
 import "../styles/Agenda.css";
 
+function getTodayIso() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${now.getFullYear()}-${month}-${day}`;
+}
+
 export default function Agenda() {
   const [sortEarliest, setSortEarliest] = useState(true);
-  const [selectedDateIso, setSelectedDateIso] = useState(eventDates[0].iso);
+  const [selectedDateIso, setSelectedDateIso] = useState(() => {
+    const todayIso = getTodayIso();
+    return eventDates.some((date) => date.iso === todayIso)
+      ? todayIso
+      : eventDates[0].iso;
+  });
   const { query } = useSearch();
 
   const eventDate =
@@ -96,42 +109,52 @@ export default function Agenda() {
     >
       <div className="agenda-list">
         {sessions.length === 0 && <SearchEmpty />}
-        {sessions.map((session) => (
-          <Link
-            key={session.id}
-            to={`/agenda/${session.id}`}
-            className="agenda-item"
-          >
-            <time className="agenda-item-time" dateTime={session.startTime}>
-              {formatTime(session.startTime)}
-            </time>
+        {sessions.map((session) => {
+          const speakers = peopleData.filter((person) =>
+            person.sessionIds?.includes(session.id),
+          );
 
-            <div className="agenda-card">
-              <div className="agenda-card-stripe" aria-hidden="true" />
+          return (
+            <Link
+              key={session.id}
+              to={`/agenda/${session.id}`}
+              className="agenda-item"
+            >
+              <time className="agenda-item-time" dateTime={session.startTime}>
+                {formatTime(session.startTime)}
+              </time>
 
-              <div className="agenda-card-body">
-                <h2 className="agenda-card-title">{session.title}</h2>
+              <div className="agenda-card">
+                <div className="agenda-card-stripe" aria-hidden="true" />
 
-                <ul className="agenda-card-meta">
-                  <li>
-                    <Clock size={14} />
-                    <span>
-                      {formatTimeRange(session.startTime, session.endTime)}
-                    </span>
-                  </li>
-                  <li>
-                    <User size={14} />
-                    <span>Facilitator {session.facilitator}</span>
-                  </li>
-                  <li>
-                    <MapPin size={14} />
-                    <span>{session.location}</span>
-                  </li>
-                </ul>
+                <div className="agenda-card-body">
+                  <h2 className="agenda-card-title">{session.title}</h2>
+
+                  <ul className="agenda-card-meta">
+                    <li>
+                      <Clock size={14} />
+                      <span>
+                        {formatTimeRange(session.startTime, session.endTime)}
+                      </span>
+                    </li>
+                    <li>
+                      <User size={14} />
+                      <span>
+                        {speakers.length > 0
+                          ? speakers.map((person) => person.name).join(", ")
+                          : `Facilitator ${session.facilitator}`}
+                      </span>
+                    </li>
+                    <li>
+                      <MapPin size={14} />
+                      <span>{session.location}</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </Layout>
   );

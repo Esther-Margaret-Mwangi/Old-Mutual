@@ -21,11 +21,7 @@ const peopleData = [
     image:
       "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174018/Arthur_Oginga_xqaodd.jpg",
     team: "Chief Executive Officer Old Mutual Holdings Plc",
-    sessionIds: [
-      "6x-strategy-delivery-update",
-      "welcome-remarks",
-      "farewell-speeches",
-    ],
+    sessionIds: ["strategy-overview", "6x-strategy-delivery-update"],
   },
   {
     id: 4,
@@ -33,7 +29,7 @@ const peopleData = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     team: "Chief Executive Officer Old Mutual Holdings Plc Uganda",
-    sessionIds: ["oil-gas-strategy"],
+    sessionIds: ["oil-gas-growth-opportunity"],
   },
   {
     id: 5,
@@ -42,8 +38,9 @@ const peopleData = [
       "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174016/Dr_Habil_Olaka_gvw5ja.jpg",
     team: "Chairperson Old Mutual Holdings Plc",
     sessionIds: [
+      "opening-remarks-day0",
+      "closed-session",
       "welcome-opening-remarks",
-      "open-feedback-day1-close",
       "closing-remarks-day2",
     ],
   },
@@ -61,7 +58,7 @@ const peopleData = [
     image:
       "https://res.cloudinary.com/dbo1334a9/image/upload/v1781174016/Dr_Catherine_Adeya_bm3gkp.jpg",
     team: "Director Old Mutual Holdings Plc",
-    sessionIds: ["toast-to-robert"],
+    sessionIds: ["open-feedback-day1-close"],
   },
   {
     id: 8,
@@ -69,7 +66,7 @@ const peopleData = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     team: "Ag. Group Chief Financial Officer",
-    sessionIds: ["space-hold-1", "space-hold-2"],
+    sessionIds: ["cost-optimization", "cash-generation"],
   },
   {
     id: 9,
@@ -77,7 +74,14 @@ const peopleData = [
     image:
       "https://res.cloudinary.com/dbo1334a9/image/upload/v1781267457/Robert_Mbugua_oyfjee.jpg",
     team: "Old Mutual",
-    sessionIds: ["roberts-remarks"],
+    sessionIds: ["appreciation-dinner"],
+  },
+  {
+    id: 10,
+    name: "Dr. Martin Oduor",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    sessionIds: ["board-talk-leading-through-transformation"],
   },
 ];
 
