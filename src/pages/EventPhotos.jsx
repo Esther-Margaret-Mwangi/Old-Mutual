@@ -2,7 +2,7 @@ import { Camera } from "lucide-react";
 import "../styles/EventPhotos.css";
 
 const EVENT_PHOTOS_IMAGE =
-  "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=80";
+  "https://www.cvent.com/sites/default/files/styles/focus_scale_and_crop_800x450/public/image/2024-04/53084990058_1cd0c54c8e_c.jpg.webp?itok=TTTXwNYV";
 const EVENT_PHOTOS_LINK = "https://stawi.pixieset.com/omboardstrategyretreat2026/";
 
 export default function EventPhotos() {
