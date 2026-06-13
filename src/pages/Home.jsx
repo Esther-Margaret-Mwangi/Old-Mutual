@@ -24,7 +24,7 @@ export default function Home() {
           <p>
             Through collaboration, strategic leadership, and a shared vision, we
             champion Accelerated Transformation to unlock new opportunities,
-            strengthen our competitive edge, and deliver lasting impact hhh
+            strengthen our competitive edge, and deliver lasting impact
           </p>
         </div>
       </section>

@@ -88,11 +88,10 @@ export default function AgendaDetail() {
           <div className="agd-speaker-list">
             {speakers.length === 0 ? (
               <div className="agd-speaker-item">
-                <div className="agd-speaker-avatar">F</div>
+                <div className="agd-speaker-avatar">S</div>
                 <div>
-                  <p className="agd-speaker-name">
-                    Facilitator {session.facilitator}
-                  </p>
+                  <p className="agd-speaker-name">Speaker To Be Announced</p>
+                  <p className="agd-speaker-role">Session speaker</p>
                 </div>
               </div>
             ) : (

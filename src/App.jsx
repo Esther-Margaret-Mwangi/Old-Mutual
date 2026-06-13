@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 import SearchButton from "./components/SearchButton";
 import { SearchProvider } from "./context/SearchContext";
 import Home from "./pages/Home";
@@ -30,6 +31,7 @@ function App() {
   return (
     <BrowserRouter>
       <SearchProvider>
+      <ScrollToTop />
       <Routes>
         {/* Full-screen detail pages — no Layout header */}
         <Route
