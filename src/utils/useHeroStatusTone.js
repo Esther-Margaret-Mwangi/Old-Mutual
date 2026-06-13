@@ -1,23 +1,67 @@
 import { useEffect, useState } from "react";
 
 const LUMINANCE_THRESHOLD = 145;
+const SAMPLE_WIDTH = 64;
+const SAMPLE_HEIGHT = 4;
+const FALLBACK_ASPECT_RATIO = 390 / 220;
 
-function getTopStripColor(image) {
+// Finds the element that's actually painting `imageSrc` as its CSS
+// background, so we can read its on-screen size.
+function findHeroElement(imageSrc) {
+  const candidates = document.querySelectorAll('[style*="background-image"]');
+  for (const element of candidates) {
+    if (getComputedStyle(element).backgroundImage.includes(imageSrc)) {
+      return element;
+    }
+  }
+  return null;
+}
+
+// Samples the slice of the source image that ends up along the very top
+// edge of the hero once `background-size: cover; background-position:
+// center` has scaled and cropped it - i.e. the part that sits behind the
+// status bar - and averages it into a single color.
+function getVisibleTopEdgeColor(image, heroElement) {
+  const imageWidth = image.naturalWidth;
+  const imageHeight = image.naturalHeight;
+  if (!imageWidth || !imageHeight) {
+    return null;
+  }
+
   const canvas = document.createElement("canvas");
-  const width = 48;
-  const height = 24;
-
-  canvas.width = width;
-  canvas.height = height;
+  canvas.width = SAMPLE_WIDTH;
+  canvas.height = SAMPLE_HEIGHT;
 
   const context = canvas.getContext("2d", { willReadFrequently: true });
   if (!context) {
     return null;
   }
 
-  context.drawImage(image, 0, 0, width, height);
+  const rect = heroElement?.getBoundingClientRect();
+  const containerWidth = rect?.width || window.innerWidth;
+  const containerHeight =
+    rect?.height || containerWidth / FALLBACK_ASPECT_RATIO;
 
-  const pixels = context.getImageData(0, 0, width, height).data;
+  const scale = Math.max(
+    containerWidth / imageWidth,
+    containerHeight / imageHeight
+  );
+  const cropTop = Math.max(0, (imageHeight - containerHeight / scale) / 2);
+  const cropLeft = Math.max(0, (imageWidth - containerWidth / scale) / 2);
+
+  context.drawImage(
+    image,
+    cropLeft,
+    cropTop,
+    imageWidth - cropLeft * 2,
+    SAMPLE_HEIGHT,
+    0,
+    0,
+    SAMPLE_WIDTH,
+    SAMPLE_HEIGHT
+  );
+
+  const pixels = context.getImageData(0, 0, SAMPLE_WIDTH, SAMPLE_HEIGHT).data;
   let r = 0;
   let g = 0;
   let b = 0;
@@ -62,7 +106,8 @@ export default function useHeroStatusTone(imageSrc) {
 
     const setToneFromImage = () => {
       try {
-        const sample = getTopStripColor(image);
+        const heroElement = findHeroElement(imageSrc);
+        const sample = getVisibleTopEdgeColor(image, heroElement);
         if (!sample) {
           setTone("light");
           setColor(null);

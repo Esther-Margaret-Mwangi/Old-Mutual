@@ -13,9 +13,6 @@
   background-color: var(--fm-black);
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .agd-back-btn {
@@ -37,12 +34,22 @@
 }
 
 .agd-hero-title {
+  position: absolute;
+  top: calc(var(--fm-safe-top) + 12px);
+  left: 0;
+  right: 0;
+  height: 38px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--fm-white);
   text-align: center;
   text-shadow: 0 2px 10px rgba(17, 17, 17, 0.25);
+  z-index: 1;
 }
 
 /* ── Floating summary card ── */

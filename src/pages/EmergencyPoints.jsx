@@ -43,7 +43,7 @@ export default function EmergencyPoints() {
             <span>Emergency Call</span>
           </button>
         </section>
-        <br />
+
         <h2 className="emp-section-title">Emergency Maps</h2>
 
         <div className="emp-card">
@@ -52,7 +52,7 @@ export default function EmergencyPoints() {
             <img src={MEETING_POINT_IMAGE} alt="Emergency Meeting Point" />
           </div>
         </div>
-        <br />
+
         <h2 className="emp-section-title">Emergency Points</h2>
         <p className="emp-text">
           There are currently no designated on-site emergency points listed for

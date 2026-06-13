@@ -53,7 +53,7 @@ export default function InfoCenter() {
             <span>Emergency Call</span>
           </button>
         </section>
-        <br />
+
         <h2 className="info-section-title">Information Center</h2>
 
         <p className="info-intro-text">
@@ -62,7 +62,7 @@ export default function InfoCenter() {
           seamless. Our dedicated team is ready to assist you with any questions
           or requests.
         </p>
-        <br />
+
         <h2 className="info-section-title">Key Contacts</h2>
 
         {contacts.map((contact) => (
