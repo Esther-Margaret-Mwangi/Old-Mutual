@@ -8,9 +8,9 @@ const EMERGENCY_TEL = "+254711032000";
 const EMERGENCY_DISPLAY = "+254 711 032 000";
 
 const MEETING_POINT_IMAGE =
-  "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80";
+  "https://res.cloudinary.com/dbo1334a9/image/upload/v1781256525/Event_Application_Headers_15_jf4cif.png";
 const HEMINGWAYS_IMAGE =
-  "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80";
+  "https://res.cloudinary.com/dbo1334a9/image/upload/v1781256525/Event_Application_Headers_15_jf4cif.png";
 
 export default function EmergencyPoints() {
   const [activeCall, setActiveCall] = useState(null);
